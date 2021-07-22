@@ -1,0 +1,369 @@
+\section{矩阵，向量}
+
+\subsection{矩阵和$n$维向量的概念}
+\begin{definition}[矩阵]
+    有$m\times n$个数$a_{ij}(i=1,2,\cdots,m;j=1,2,\cdots,n)$排成$m$行$n$列数表，外加括号，写成
+    $$
+    \left(\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1 n} \\
+    a_{21} & a_{22} & \cdots & a_{2 n} \\
+    \vdots & \vdots & & \vdots \\
+    a_{m 1} & a_{m 2} & \cdots & a_{m n}
+    \end{array}\right)
+    $$
+    叫做$m$行$n$列矩阵，简称{\heiti $m\times n$矩阵}。
+\end{definition}
+
+\begin{definition}[$n$维向量]
+    $n$个数$a_1,a_2\cdots,a_n$组成的有序数组
+    $$(a_1,a_2,\cdots,a_n)\quad \mbox{或}  \quad   \left(\begin{array}{c}
+        a_{1}  \\
+        a_{2}  \\
+        \vdots \\
+        a_{n} 
+        \end{array}\right)$$
+    称为{\heiti $n$维向量}，前者称为{\heiti 行向量}，后者称为{\heiti 列向量}。
+\end{definition}
+
+\begin{remark}[]
+    几个特殊的矩阵：
+    
+    设$\boldsymbol{A}=(a_{ij})_{n\times n}$为$n$阶方阵，如果当$i\neq j$时，$a_{ij}=0$，即
+    $$
+    \boldsymbol{A}=\left(\begin{array}{cccc}
+    a_{11} & 0 & \cdots & 0 \\
+    0 & a_{22} & \cdots & 0 \\
+    \vdots & \vdots & & \vdots \\
+    0 & \cdots & 0 & a_{n n}
+    \end{array}\right)
+    $$
+    则称$\boldsymbol{A}$为{\heiti 对角矩阵}。为了书写简洁起见，也经常用$\mathrm{diag}(a_{11},a_{22},\cdots,a_{nn})$
+    表示此对角矩阵$\boldsymbol{A}$。
+
+    如果对角矩阵$\boldsymbol{A}$中的$a_{11},a_{22},\cdots,a_{nn}=k$，则称$\boldsymbol{A}$为{\heiti 数量矩阵}，当$k=1$时，称为{\heiti 单位矩阵}，记为
+    $\boldsymbol{E}$或$\boldsymbol{I}$
+
+    设$\boldsymbol{A}=(a_{ij})_{n\times n}$为$n$阶方阵，如果当$i>j$时，$a_{ij}=0$，即
+    $$
+    \boldsymbol{A}=\left(\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1 n} \\
+    0 & a_{22} & \cdots & a_{2 n} \\
+    \vdots & \vdots & & \vdots \\
+    0 & 0 & \cdots & a_{n n}
+    \end{array}\right)
+    $$
+    则称$\boldsymbol{A}$为{\heiti 上三角形矩阵}。类似地，可定义{\heiti 下三角形矩阵}
+    $$
+    \boldsymbol{B}=\left(\begin{array}{cccc}
+    b_{11} & 0 & \cdots & 0 \\
+    b_{21} & b_{22} & \cdots & 0\\
+    \vdots & \vdots & & \vdots \\
+    b_{n1} & b_{n2} & \cdots & b_{n n}
+    \end{array}\right)
+    $$
+
+    设$\boldsymbol{A}=(a_{ij})_{n\times n}$为$n$阶方阵，如果矩阵的元素满足$a_{ij}=a_{ji}(i,j=1,2,\cdots,n)$，则称$\boldsymbol{A}$为
+    {\heiti 对称矩阵}；如果矩阵的元素满足$a_{ij}=-a_{ji}(i,j=1,2,\cdots,n)$，则称$\boldsymbol{A}$为
+    {\heiti 反对称矩阵}。例如
+    $$
+    \boldsymbol{A}=\left(\begin{array}{ccc}
+    1 & 0 & -1 \\
+    0 & 2 & 5 \\
+    -1 & 5 & 3
+    \end{array}\right), \quad \boldsymbol{B}=\left(\begin{array}{ccc}
+    0 & 1 & -6 \\
+    -1 & 0 & -7 \\
+    6 & 7 & 0
+    \end{array}\right)
+    $$
+    依次是对称矩阵和反对称矩阵。
+\end{remark}
+
+\begin{definition}[转置矩阵]
+    把$m\times n$矩阵
+    $$
+    \boldsymbol{A}=\left(\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1 n} \\
+    a_{21} & a_{22} & \cdots & a_{2 n} \\
+    \vdots & \vdots & & \vdots \\
+    a_{m 1} & a_{m 2} & \cdots & a_{m n}
+    \end{array}\right)
+    $$
+    的行与列互换后得到一个$n\times m$矩阵，称为$\boldsymbol{A}$的{\heiti 转置矩阵}，记为$A^\mathrm{T}$或$A^{\prime}$。
+\end{definition}
+
+\begin{definition}[方阵的行列式]
+    行列式
+    $$
+    \left|\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1 n} \\
+    a_{21} & a_{22} & \cdots & a_{2 n} \\
+    \vdots & \vdots & & \vdots \\
+    a_{n 1} & a_{n 2} & \cdots & a_{n n}
+    \end{array}\right|
+    $$
+    称为方阵$\boldsymbol{A}=(a_{ij})_{n\times n}$的行列式，记为$|\boldsymbol{A}|$。如果$|\boldsymbol{A}|\neq 0$，则称矩阵$\boldsymbol{A}$
+    是{\heiti 非异矩阵}，如果$|\boldsymbol{A}|=0$，则称矩阵$\boldsymbol{A}$是{\heiti 奇异矩阵}或{\heiti 退化矩阵}。
+\end{definition}
+
+\subsection{矩阵运算}
+\begin{definition}[矩阵的加法]
+    设$\boldsymbol{A}=(a_{ij})_{m\times n}$与$\boldsymbol{B}=(b_{ij})_{m\times n}$是两个同型矩阵，矩阵$\boldsymbol{A}$和矩阵$\boldsymbol{B}$
+    的和定义为${(a_{ij}+b_{ij})}_{m\times n}$，记为$\boldsymbol{A}+\boldsymbol{B}$：
+    $$\boldsymbol{A}+\boldsymbol{B}={(a_{ij}+b_{ij})}_{m\times n}$$
+\end{definition}
+
+\begin{theorem}
+    矩阵加法的性质:
+    \begin{enumerate}
+        \item 交换律：$\boldsymbol{A}+\boldsymbol{B}=\boldsymbol{B}+\boldsymbol{A}$
+        \item 结合律：$(\boldsymbol{A}+\boldsymbol{B})+\boldsymbol{C}=\boldsymbol{A}+(\boldsymbol{B}+\boldsymbol{C})$
+        \item 零矩阵：对任一矩阵$\boldsymbol{A}$，$\boldsymbol{A}+\boldsymbol{O}=\boldsymbol{A}=\boldsymbol{O}+\boldsymbol{A}$（$\boldsymbol{O}$与$\boldsymbol{A}$是同型矩阵）
+        \item 负矩阵：对任一矩阵$\boldsymbol{A}=(a_{ij})$，可定义$-\boldsymbol{A}=(-a_{ij})$，称$-\boldsymbol{A}$为$\boldsymbol{A}$的负矩阵。显然$\boldsymbol{A}+(-\boldsymbol{A})=\boldsymbol{O}$
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}[矩阵的数乘]
+    数$k$与矩阵$\boldsymbol{A}={(a_{ij})}_{m\times n}$相乘的积的定义为${(ka_{ij})}_{m\times n}$，记为$k\boldsymbol{A}$：
+    $$k\boldsymbol{A}={(ka_{ij})}_{m\times n}$$
+\end{definition}
+
+\begin{theorem}[方阵的数乘与其行列式]
+    若$\boldsymbol{A}$是$n$阶方阵，$k$为任意数，则有$|k\boldsymbol{A}|=k^n|\boldsymbol{A}|$
+\end{theorem}
+
+\begin{definition}[矩阵的乘法]
+    设$\boldsymbol{A}={(a_{ij})}_{m\times l},\boldsymbol{B}={(b_{ij})}_{l\times n}$，则$\boldsymbol{A}$与$\boldsymbol{B}$的乘积$\boldsymbol{A}\boldsymbol{B}$定义为
+    $\boldsymbol{C}={(c_{ij})}_{m\times n}$，其中
+    $$c_{ij}=\sum _{k=1}^l a_{ik}b_{kj}=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots+a_{il}b_{lj}\quad (i=1,2,\cdots,m;j=1,2,\cdots,n)$$
+\end{definition}
+
+\begin{remark}
+    只有当$\boldsymbol{A}$的列数和$\boldsymbol{B}$的行数相等时，乘积$\boldsymbol{A}\boldsymbol{B}$才有意义，且乘积矩阵$\boldsymbol{C}$的行数与矩阵$\boldsymbol{A}$的行数相同，
+    $\boldsymbol{C}$的列数与矩阵$\boldsymbol{B}$的列数相同。
+
+    矩阵乘法不满足交换律和消去律，但满足结合律，数乘结合律和分配律。
+\end{remark}
+
+\begin{definition}[矩阵多项式]
+    设$\boldsymbol{A}$是$n$阶方阵，定义$\boldsymbol{A}^0=\boldsymbol{E}_n,\boldsymbol{A}^1=\boldsymbol{A},\boldsymbol{A}^2=\boldsymbol{A}\boldsymbol{A},\cdots,\boldsymbol{A}^{k+1}=\boldsymbol{A}^k\boldsymbol{A}$
+    其中$k$为正整数，这也就是说$\boldsymbol{A}^k$是$k$个$\boldsymbol{A}$连乘，称$\boldsymbol{A}^k$是方阵$\boldsymbol{A}$的$k${\heiti 次幂}。再任取$m+1$个实数$a_0,a_1,\cdots,a_m$，显然
+    $$f(\boldsymbol{A})=a_0\boldsymbol{E}+a_1\boldsymbol{A}+\cdots+a_m\boldsymbol{A}^m$$
+    仍为$n$阶矩阵。称$f(\boldsymbol{A})$为{\heiti 矩阵多项式}
+\end{definition}
+
+\begin{theorem}
+    转置矩阵的性质:
+    \begin{enumerate}
+        \item ${({\boldsymbol{A}}^\mathrm{T})}^\mathrm{T}=\boldsymbol{A};\quad |\boldsymbol{A}^\mathrm{T}|=|\boldsymbol{A}|$
+        \item ${(\boldsymbol{A}+\boldsymbol{B})}^\mathrm{T}=\boldsymbol{A}^\mathrm{T}+\boldsymbol{B}^\mathrm{T}$
+        \item ${(k\boldsymbol{A})}^\mathrm{T}=k\boldsymbol{A}^\mathrm{T}$
+        \item ${(\boldsymbol{A}\boldsymbol{B})}^\mathrm{T}=\boldsymbol{B}^\mathrm{T}\boldsymbol{A}^\mathrm{T}$，该式还可以推广为${(\boldsymbol{A}_1\boldsymbol{A}_2\cdots\boldsymbol{A}_k)}^\mathrm{T}=\boldsymbol{A}_k^\mathrm{T}\cdots\boldsymbol{A}_2^\mathrm{T}\boldsymbol{A}_1^\mathrm{T}$
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}[分块矩阵]
+    对于一个$m\times n$矩阵，如果在行的方向分成$s$块，在列的方向分成$t$块，就得到$\boldsymbol{A}$的一个$s\times t$分块矩阵，记作
+    $$
+    \begin{array}{c}
+    \boldsymbol{A}=\left(\boldsymbol{A}_{k l}\right)_{s \times t}=\left(\begin{array}{cccc}
+    \boldsymbol{A}_{11} & \boldsymbol{A}_{12} & \cdots & \boldsymbol{A}_{1 t} \\
+    \boldsymbol{A}_{21} & \boldsymbol{A}_{22} & \cdots & \boldsymbol{A}_{2 t} \\
+    \vdots & \vdots & & \vdots \\
+    \boldsymbol{A}_{s 1} & \boldsymbol{A}_{s 2} & \cdots & \boldsymbol{A}_{s t}
+    \end{array}\right) \quad \begin{array}{c}
+    m_{1}\mbox{行} \\
+    m_{2}\mbox{行} \\
+    \vdots \\
+    m_{s}\mbox{行}
+    \end{array} \\
+    \begin{array}{rrrrr}
+    {\color{white} text}&n_{1}\mbox{列} & n_{2}\mbox{列} & \cdots & n_{t}\mbox{列}
+    \end{array}
+    \end{array}$$
+    其中$m_1+m_2+\cdots+m_s=m,n_1+n_2+\cdots+n_t=n$，而$\boldsymbol{A}_{kl}(k=1,2,\cdots,s;l=1,2,\cdots,t)$称为$\boldsymbol{A}$的子块。
+\end{definition}
+
+\begin{theorem}
+    分块矩阵的运算：
+    \begin{enumerate}
+        \item 分块矩阵的加法。设分块矩阵$\boldsymbol{A}={(\boldsymbol{A}_{k l})}_{s\times t},\boldsymbol{B}={(\boldsymbol{B}_{k l})}_{s\times t}$
+        如果$\boldsymbol{A}$与$\boldsymbol{B}$对应的子块$\boldsymbol{A}_{kl}$和$\boldsymbol{B}_{kl}$都是同型矩阵，则
+        $$\boldsymbol{A}+\boldsymbol{B}={(\boldsymbol{A}_{k l}+\boldsymbol{B}_{kl})}_{s\times t}$$
+        \item 分块矩阵的数乘。设分块矩阵$\boldsymbol{A}={(\boldsymbol{A}_{k l})}_{s\times t}$，$k$是数，则
+        $$k\boldsymbol{A}={(k\boldsymbol{A}_{k l})}_{s\times t}$$
+        \item 分块矩阵的乘法。设$\boldsymbol{A}={(a_{ij})}_{m\times n},\boldsymbol{B}={(b_{ij})}_{n\times p}$
+        如果把$\boldsymbol{A},\boldsymbol{B}$分别分块为$r\times s$和$s\times t$分块矩阵，且$\boldsymbol{A}$的列的分块法与$\boldsymbol{B}$的行的分块法完全相同，则
+        $$
+        \boldsymbol{A} \boldsymbol{B}=\left(\begin{array}{cccc}
+        \boldsymbol{A}_{11} & \boldsymbol{A}_{12} & \cdots & \boldsymbol{A}_{1 s} \\
+        \boldsymbol{A}_{21} & \boldsymbol{A}_{22} & \cdots & \boldsymbol{A}_{2 s} \\
+        \vdots & \vdots & & \vdots \\
+        \boldsymbol{A}_{r 1} & \boldsymbol{A}_{r 2} & \cdots & \boldsymbol{A}_{r s}
+        \end{array}\right)\left(\begin{array}{cccc}
+        \boldsymbol{B}_{11} & \boldsymbol{B}_{12} & \cdots & \boldsymbol{B}_{1 t} \\
+        \boldsymbol{B}_{21} & \boldsymbol{B}_{22} & \cdots & \boldsymbol{B}_{2 t} \\
+        \vdots & \vdots & & \vdots \\
+        \boldsymbol{B}_{s 1} & \boldsymbol{B}_{s 2} & \cdots & \boldsymbol{B}_{s t}
+        \end{array}\right)=\boldsymbol{C}=\left(\boldsymbol{C}_{k l}\right)_{r \times t}
+        $$
+        其中$\boldsymbol{C}$是$r\times t$分块矩阵，且
+        $$\boldsymbol{C}_{kl}=\boldsymbol{A}_{k1}\boldsymbol{B}_{1l}+\boldsymbol{A}_{k2}\boldsymbol{B}_{2l}+\cdots+\boldsymbol{A}_{ks}\boldsymbol{B}_{sl}=\sum _{i=1}^s \boldsymbol{A}_{ki}\boldsymbol{B}_{il}(k=1,2,\cdots,r;l=1,2,\cdots,t)$$
+        \item 分块矩阵的转置。$s\times t$分块矩阵$\boldsymbol{A}={(\boldsymbol{A}_{k l})}_{s\times t}$的转置矩阵$\boldsymbol{A}^\mathrm{T}$为$t\times s$分块矩阵，如果记
+        $\boldsymbol{A}^\mathrm{T}={(\boldsymbol{B}_{lk})}_{t\times s}$，则$$\boldsymbol{B}_{lk}=\boldsymbol{A}^\mathrm{T}_{kl}(l=1,2,\cdots,t;k=1,2,\cdots,s)$$
+        \item 分块对角矩阵。设$n$阶矩阵$\boldsymbol{A}$的分块矩阵只有在对角线上有非零子块，其余子块都为零矩阵，且在对角线上的子块都是方阵，即
+        $$
+        \boldsymbol{A}=\left(\begin{array}{cccc}
+        \boldsymbol{A}_{1} & & & \\
+        & \boldsymbol{A}_{2} & & \\
+        & & \ddots & \\
+        & & & \boldsymbol{A}_{s}
+        \end{array}\right)
+        $$
+        其中$\boldsymbol{A}_i(i=1,2,\cdots.s)$都是方阵，则称$\boldsymbol{A}$为分块对角矩阵，也称{\heiti 准对角矩阵}。
+    \end{enumerate}    
+\end{theorem}
+
+\subsection{初等变换与初等矩阵}
+\begin{definition}[初等变换]
+    下面三种对矩阵的变换，统称为矩阵的初等变换：
+    \begin{enumerate}
+        \item 对调变换：互换矩阵$i,j$两行（列），记为$r_i\leftrightarrow r_j(c_i\leftrightarrow c_j)$
+        \item 数乘变换：用任意数$k\neq 0$去乘矩阵的第$i$行（列），记为$kr_i(kc_i)$
+        \item 倍加变换：把矩阵的第$i$行（列）的$k$倍加到第$j$行（列），其中$k$为任意数，记为$r_j+kr_i(c_j+kc_i)$
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[初等矩阵]
+    将单位矩阵$\boldsymbol{E}$做一次初等变换得到的矩阵称为初等矩阵。
+    \begin{enumerate}
+        \item 初等对调矩阵
+        $$
+        \begin{array}{c}
+        \boldsymbol{E}_{(i,j)}=\left(\begin{array}{ccccccc}
+        1 & & & & & & \\
+        & \ddots & & & & &\\
+        & & 0 & & 1& &\\
+        & & & \ddots & & &\\
+        & & 1&  &0 & &\\
+        & & &  & & \ddots&\\
+        & & &  & & &1
+        \end{array}\right)\quad\begin{array}{c}     
+             \\
+             \\
+           \leftarrow \mbox{第}i\mbox{行}  \\
+            \\
+            \leftarrow \mbox{第}j\mbox{行}  \\
+            \\
+            \\
+           \end{array}\\
+           \begin{array}{ccccccc}
+            & &\uparrow  & \uparrow&    &   &{\color{white} 0}\\
+            & & \mbox{第}i\mbox{列} & \mbox{第}j\mbox{列} & {\color{white} 0}& 
+            \end{array}
+        \end{array}
+        $$
+        即是将单位矩阵的第$i$行与第$j$行对调后所得的矩阵。
+        \item 初等倍乘矩阵
+        $$
+        \begin{array}{c}
+        \boldsymbol{E}(i(k))=\left(\begin{array}{ccccc}
+        1 & & & &  \\
+        & \ddots & & & \\
+        & & k & & \\
+        & & & \ddots & \\
+        & & &  &1 \\
+        \end{array}\right)\quad\begin{array}{c}     
+             \\
+             \\
+           \leftarrow \mbox{第}i\mbox{行}  \\
+            \\
+            \\
+          \end{array}\\
+           \begin{array}{ccccccc}
+            & &\uparrow  &&    &   &\\
+            & & \mbox{第}i\mbox{列} &  & & 
+            \end{array}
+        \end{array}$$
+        其中$k\neq 0$是任意数。既是将单位矩阵的第$i$个$1$换成$k$后所得的矩阵。
+        \item 初等倍加矩阵
+        $$
+        \begin{array}{c}
+        \boldsymbol{E}(i,j(k))=\left(\begin{array}{ccccccc}
+        1 & & & & & & \\
+        & \ddots & & & & &\\
+        & & 1 &\cdots & k& &\\
+        & & & \ddots & & &\\
+        & & &  &1 & &\\
+        & & &  & & \ddots&\\
+        & & &  & & &1
+        \end{array}\right)\quad\begin{array}{c}     
+             \\
+             \\
+           \leftarrow \mbox{第}i\mbox{行}  \\
+            \\
+            \leftarrow \mbox{第}j\mbox{行}  \\
+            \\
+            \\
+           \end{array}\\
+           \begin{array}{cccccccc}
+        {\color{white} 00} &{\color{white} 00} &\uparrow & & \uparrow&    &   &{\color{white} 0}\\
+           {\color{white} 00}&{\color{white} 00} & \mbox{第}i\mbox{列}& & \mbox{第}j\mbox{列} & {\color{white} 0}& 
+            \end{array}
+        \end{array}
+        $$
+        即是将单位矩阵的第$i$行第$j$列的元素换成$k$后所得的矩阵。
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}[初等变换与初等矩阵]
+    设$\boldsymbol{A}$是一个$m\times n$矩阵，对$\boldsymbol{A}$施行一次初等行变换，相当于在$\boldsymbol{A}$的左边乘以一个
+    相应的$m$阶初等矩阵；对$\boldsymbol{A}$施行一次初等行变换，相当于在$\boldsymbol{A}$的右边乘以一个相应的$n$阶初等矩阵。
+\end{theorem}
+\begin{remark}
+    定理说法中“相应”的含义，具体来说，就是
+    \begin{itemize}
+        \item $\boldsymbol{E}(i,j)\boldsymbol{A}$：表示$\boldsymbol{A}$的第$i$行与第$j$行互换；
+        \item $\boldsymbol{E}(i(k))\boldsymbol{A}$：表示$\boldsymbol{A}$的第$i$行乘以$k$；
+        \item $\boldsymbol{E}(i,j(k))\boldsymbol{A}$：表示$\boldsymbol{A}$的第$j$行乘以$k$加到第$i$行上；
+        \item $\boldsymbol{A}\boldsymbol{E}(i,j)$：表示$\boldsymbol{A}$的第$i$列与第$j$列互换；
+        \item $\boldsymbol{A}\boldsymbol{E}(i(k))$：表示$\boldsymbol{A}$的第$i$列乘以$k$；
+        \item $\boldsymbol{A}\boldsymbol{E}(i,j(k))$：表示$\boldsymbol{A}$的第$i$列乘以$k$加到第$j$列上.
+    \end{itemize}
+\end{remark}
+
+\begin{definition}[行(列)等价矩阵，等价矩阵]
+    如果矩阵$\boldsymbol{A}$经过有限次初行等变换变成矩阵$\boldsymbol{B}$，则称矩阵$\boldsymbol{A}$与$\boldsymbol{B}$
+    {\heiti 行等价}，记作$\boldsymbol{A}\stackrel{r}{\longrightarrow}\boldsymbol{B}$；
+    如果矩阵$\boldsymbol{A}$经过有限次初等列变换变成矩阵$\boldsymbol{B}$，则称矩阵$\boldsymbol{A}$与$\boldsymbol{B}$
+    {\heiti 列等价}，记作$\boldsymbol{A}\stackrel{c}{\longrightarrow}\boldsymbol{B}$；
+    如果矩阵$\boldsymbol{A}$经过有限次初等变换变成矩阵$\boldsymbol{B}$，则称矩阵$\boldsymbol{A}$与$\boldsymbol{B}$
+    {\heiti 等价}，记作$\boldsymbol{A}\stackrel{}{\longrightarrow}\boldsymbol{B}$。
+\end{definition}
+
+\begin{theorem}
+    具有行等价关系的矩阵所对应的线性方程组有相同的解。
+\end{theorem}
+
+\begin{definition}[梯形矩阵]
+    若矩阵$\boldsymbol{A}$满足下面两个条件：
+    \begin{enumerate}[(1)]
+        \item 若有零行，则零行全部在下方；
+        \item 从第一行起，每行第一个非零元素前面的零的个数逐行增加。
+    \end{enumerate}
+    则称矩阵$\boldsymbol{A}$为{\heiti 行梯形矩阵}。若$\boldsymbol{A}$还满足：
+    \begin{enumerate}[(3)]
+        \item 非零行的第一个非零元素为$1$，且"$1$"所在列的其余元素全为零，则称$\boldsymbol{A}$为
+        {\heiti 行简化梯形矩阵}。
+    \end{enumerate}
+
+    类似可定义{\heiti 列梯形矩阵}与{\heiti 列简化梯形矩阵}。
+\end{definition}
+
+
+
+
+
+
+
+

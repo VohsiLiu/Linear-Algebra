@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}行列式}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}二阶与三阶行列式}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}$n$阶行列式}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}矩阵，向量}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}矩阵和$n$维向量的概念}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}矩阵运算}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}初等变换与初等矩阵}{8}{subsection.2.3}%

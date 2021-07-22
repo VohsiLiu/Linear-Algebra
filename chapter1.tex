@@ -1,0 +1,204 @@
+\section{行列式}
+
+\subsection{二阶与三阶行列式}
+
+\begin{definition}[二阶行列式]
+  将4个可以进行乘法与加法运算的元素$a,b,c,d$排成两行两列，引用记号
+  $$\left|\begin{array}{ll}
+    a & b \\
+    c & d
+    \end{array}\right|=ad-bc$$
+  并称之为{\heiti 二阶行列式}。行列式也可简记为$\Delta$、$D$等
+\end{definition}
+
+\begin{theorem}
+  对于方程组
+  \begin{equation}\label{1}
+  \left\{\begin{array}{l}a_{11} x_{1}+a_{12} x_{2}=b_{1} \\ a_{21} x_{1}+a_{22} x_{2}=b_{2}\end{array}\right.
+  \end{equation}
+  记$$\Delta= \left|\begin{array}{ll}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+    \end{array}\right|=a_{11}a_{22}-a_{12}a_{21}$$
+    $$\Delta_1= \left|\begin{array}{ll}
+      b_{1} & a_{12} \\e
+      b_{22} & a_{22}
+      \end{array}\right|=b_{1}a_{22}-a_{12}b_{2}$$
+    $$\Delta_2= \left|\begin{array}{ll}
+      a_{11} & b_{1} \\
+      a_{21} & b_{2}
+      \end{array}\right|=a_{11}b_{2}-b_{1}a_{21}$$
+      有如下结论:
+    \begin{enumerate}
+      \item 若$\Delta \neq 0$，则方程组\eqref{1} 有唯一解：$\displaystyle{x_1=\frac{\Delta_1}{\Delta},x_2=\frac{\Delta_2}{\Delta}}$
+      \item 若$\Delta=0$，但$\Delta_1,\Delta_2$不全为零则方程组\eqref{1} 无解
+      \item 若$\Delta=\Delta_1=\Delta_2=0$，则方程组\eqref{1}有无穷多组解
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}[三阶行列式]
+  设有9个可以进行乘法和加法运算的元素排成三行三列，引用记号
+  $$\left|\begin{array}{lll}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+    \end{array}\right|=a_{11} a_{22} a_{33}+a_{12} a_{23} a_{31}+a_{13} a_{21} a_{32}-a_{13} a_{22} a_{31}-a_{12} a_{21} a_{33}-a_{11} a_{23} a_{32}$$
+    并称之为{\heiti 三阶行列式}，其中$a_{ij}(i,j=1,2,3)$为该行列式的元素。
+\end{definition}
+
+\begin{theorem}
+  对于方程组
+  \begin{equation}\label{2}
+    \left\{\begin{array}{l}
+      a_{11} x_{1}+a_{12} x_{2}+a_{13} x_{3}=b_{1} \\
+      a_{21} x_{1}+a_{22} x_{2}+a_{23} x_{3}=b_{2} \\
+      a_{31} x_{1}+a_{32} x_{2}+a_{33} x_{3}=b_{3}
+      \end{array}\right.
+  \end{equation}
+  记$$\Delta_{1}=\left|\begin{array}{ccc}
+    b_{1} & a_{12} & a_{13} \\
+    b_{2} & a_{22} & a_{23} \\
+    b_{3} & a_{32} & a_{33}
+    \end{array}\right|, \quad \Delta_{2}=\left|\begin{array}{ccc}
+    a_{11} & b_{1} & a_{13} \\
+    a_{21} & b_{2} & a_{23} \\
+    a_{31} & b_{3} & a_{33}
+    \end{array}\right|, \quad \Delta_{3}=\left|\begin{array}{ccc}
+    a_{11} & a_{12} & b_{1} \\
+    a_{21} & a_{22} & b_{2} \\
+    a_{31} & a_{32} & b_{3}
+    \end{array}\right|$$
+    有如下结论：
+    \begin{enumerate}
+      \item 若$\Delta\neq 0$，则方程组\eqref{2}有唯一解$\displaystyle{x_1=\frac{\Delta_1}{\Delta},x_2=\frac{\Delta_2}{\Delta},x_3=\frac{\Delta_3}{\Delta}}$
+      \item 若$\Delta=0$，而$\Delta_1,\Delta_2,\Delta_3$不全为0，则方程组\eqref{2}无解
+      \item 若$\Delta=\Delta_1=\Delta_2=\Delta_3=0$，则方程组\eqref{2}可能无解也可能有无穷多组解
+    \end{enumerate}
+\end{theorem}
+
+\subsection{$n$阶行列式}
+\begin{definition}[$n$阶行列式]
+  设有$n^2$个可以进行加法和乘法运算的元素排成$n$行$n$列，引用记号
+  $$
+  D_{n}=\left|\begin{array}{cccc}
+  a_{11} & a_{12} & \cdots & a_{1 n} \\
+  a_{21} & a_{22} & \cdots & a_{2 n} \\
+  \vdots & \vdots & & \vdots \\
+  a_{n 1} & a_{n 2} & \cdots & a_{n n}
+  \end{array}\right|
+  $$
+  称它为{\heiti $n$阶行列式}，它是一个算式，有时也用记号$|a_{ij}|_{n\times n}$表示。
+
+  其数值可归纳定义为：当$n=1$时，一阶行列式的值定义为$D_1=\det (a_{11})=a_{11}$；当$n\geq 2$时，
+  $$D_n=a_{11}A_{11}+a_{12}A_{12}+\cdots+a_{1n}A_{1n}=\sum _{j=1}^n a_{1j}A_{1j}$$
+  其中$$A_{ij}={(-1)}^{i+j}M_{ij}$$
+  而$$
+  M_{i j}=\left|\begin{array}{cccccc}
+  a_{11} & \cdots & a_{1, j-1} & a_{1, j+1} & \cdots & a_{1 n} \\
+  \vdots & & \vdots & \vdots & & \vdots \\
+  a_{i-1,1} & \cdots & a_{i-1, j-1} & a_{i-1, j+1} & \cdots & a_{i-1, n} \\
+  a_{i+1,1} & \cdots & a_{i+1, j-1} & a_{i+1, j+1} & \cdots & a_{i+1, n} \\
+  \vdots & & \vdots & \vdots & & \vdots \\
+  a_{n 1} & \cdots & a_{n, j-1} & a_{n, j+1} & \cdots & a_{n n}
+  \end{array}\right|
+  $$
+  并称$M_{ij}$为元素$a_{ij}$的{\heiti 余子式}，$A_{ij}$为元素$a_{ij}$的{\heiti 代数余子式}。显然$M_{ij}$
+  为一个$n-1$阶的行列式，它是在$D_n$中划去元素$a_{ij}$所在的第$i$行和第$j$列后得到的一个行列式。
+\end{definition}
+
+\begin{remark}
+  三角行列式的值为主对角线上元素的乘积。
+\end{remark}
+
+\begin{definition}[转置行列式]
+  设$$
+  A=\left|\begin{array}{cccc}
+  a_{11} & a_{12} & \cdots & a_{1 n} \\
+  a_{21} & a_{22} & \cdots & a_{2 n} \\
+  \vdots & \vdots & & \vdots \\
+  a_{n 1} & a_{n 2} & \cdots & a_{n n}
+  \end{array}\right|, \quad A^{\prime}=\left|\begin{array}{cccc}
+  a_{11} & a_{21} & \cdots & a_{n 1} \\
+  a_{12} & a_{22} & \cdots & a_{n 2} \\
+  \vdots & \vdots & & \vdots \\
+  a_{1 n} & a_{2 n} & \cdots & a_{n n}
+  \end{array}\right|
+  $$
+  称$A^{\prime}$为行列式$A$的{\heiti 转置行列式}（也可以表示为$A^{\mathrm{T}}$）。
+  显然$A^{\prime}$是行列式$A$的行和列互换之后得到的行列式。
+\end{definition}
+
+\begin{theorem}
+  $n$阶行列式的性质：
+  \begin{itemize}
+    \item 行列式与它的转置行列式的值相等。
+    \item 对调两行（列）的位置，行列式的值相差一个负号
+    \item 两行（列）相等的行列式的值为0
+    \item 行列式可以按任意一行（列）展开
+    \item 行列式的任一行（列）元素的公因子可以提到行列式外面
+    \item 若行列式的某两行（列）成比例，则该行列式的值为零
+    \item 若行列式的第$i$行（列）的每一个元素都可以表示为两数的和，则该行列式可以表示为两个行列式之和
+    \item 行列式任一行（列）的元素与另一行（列）元素的代数余子式对应乘积之和为零\\即，若设$A=|a_{ij}|_{n\times n}$，则有
+    $$
+    \sum_{k=1}^{n} a_{i k} A_{j k}=a_{i 1} A_{j 1}+a_{i 2} A_{j 2}+\cdots+a_{i n} A_{j n}=\left\{\begin{array}{ll}
+    A, & i=j \\
+    0, & i \neq j
+    \end{array}\right.
+    $$
+    或
+    $$
+    \sum_{k=1}^{n} a_{ki} A_{kj}=a_{1i} A_{1j}+a_{2i} A_{2j}+\cdots+a_{ni} A_{nj}=\left\{\begin{array}{ll}
+    A, & i=j \\
+    0, & i \neq j
+    \end{array}\right.
+    $$
+  \end{itemize}
+\end{theorem}
+
+\begin{theorem}[克莱姆法则]
+  对于$n$元线性方程组
+    \begin{equation}\label{3}
+      \left\{\begin{array}{l}
+        a_{11} x_{1}+a_{12} x_{2}+\cdots+a_{1n} x_{3}=b_{1} \\
+        a_{21} x_{1}+a_{22} x_{2}+\cdots+a_{2n} x_{3}=b_{2} \\
+        \cdots\cdots\\
+        a_{n1} x_{1}+a_{n2} x_{2}+\cdots+a_{nn} x_{n}=b_{n}
+        \end{array}\right.
+    \end{equation}
+    若系数行列式
+    $$
+    D=\left|\begin{array}{cccc}
+    a_{11} & a_{12} & \cdots & a_{1 n} \\
+    a_{21} & a_{22} & \cdots & a_{2 n} \\
+    \vdots & \vdots & & \vdots \\
+    a_{n 1} & a_{n 2} & \cdots & a_{n n}
+    \end{array}\right| \neq 0
+    $$
+    则方程组\eqref{3}有解，且解是唯一的，这个解可以表示为
+    $$x_j=\frac{D_j}{D}\qquad(j=1,2,\cdots,n)$$
+    其中$D_j(j=1,2,\cdots,n)$是将$D$的第$j$列元素$a_{1j},a_{2j},\cdots,a_{nj}$换成方程组右端的常数项
+    $b_1,b_2,\cdots,b_n$所得到的行列式，即
+    $$
+    D_{j}=\left|\begin{array}{ccccccc}
+    a_{11} & \cdots & a_{1, j-1} & b_{1} & a_{1, j+1} & \cdots & a_{1 n} \\
+    a_{21} & \cdots & a_{2, j-1} & b_{2} & a_{2, j+1} & \cdots & a_{2 n} \\
+    \vdots & & \vdots & \vdots & \vdots & & \vdots \\
+    a_{n 1} & \cdots & a_{n, j-1} & b_{n} & a_{n, j+1} & \cdots & a_{n n}
+    \end{array}\right| \quad(j=1,2, \cdots, n)
+    $$
+
+    考虑方程组\eqref{3}的一个特殊情形，方程组\eqref{3}右端的常数项$b_1,b_2,\cdots,b_n$全部为零，即
+    \begin{equation}\label{4}   
+    \left\{\begin{array}{l}
+      a_{11} x_{1}+a_{12} x_{2}+\cdots+a_{1n} x_{3}=0 \\
+      a_{21} x_{1}+a_{22} x_{2}+\cdots+a_{2n} x_{3}=0\\
+      \cdots\cdots\\
+      a_{n1} x_{1}+a_{n2} x_{2}+\cdots+a_{nn} x_{n}=0
+      \end{array}\right.
+    \end{equation}
+      这样的方程组称为{\heiti 齐次线性方程组}，而方程组\eqref{3}称为{\heiti 非齐次线性方程组}。
+\end{theorem}
+
+\begin{theorem}
+  含有$n$个未知数$n$个方程的齐次线性方程组\eqref{4}若有非零解，则它的系数行列式等于零。
+\end{theorem}
