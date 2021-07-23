@@ -4,6 +4,8 @@
 \contentsline {section}{\numberline {2}矩阵，向量}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}矩阵和$n$维向量的概念}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}矩阵运算}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}初等变换与初等矩阵}{8}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}矩阵的秩}{10}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}可逆矩阵与伴随矩阵}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.3}分块矩阵}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}初等变换与初等矩阵}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}矩阵的秩}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}可逆矩阵与伴随矩阵}{11}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}向量组的线性相关与线性无关}{13}{subsection.2.7}%

@@ -162,6 +162,7 @@
     \end{enumerate}
 \end{theorem}
 
+\subsection{分块矩阵}
 \begin{definition}[分块矩阵]
     对于一个$m\times n$矩阵，如果在行的方向分成$s$块，在列的方向分成$t$块，就得到$\boldsymbol{A}$的一个$s\times t$分块矩阵，记作
     $$
@@ -444,3 +445,106 @@
 \end{theorem}
 
 \subsection{可逆矩阵与伴随矩阵}
+\begin{definition}[逆矩阵]
+    对于$n$阶方阵$\boldsymbol{A}$，如果存在同阶方阵$\boldsymbol{B}$，使得
+    $$\boldsymbol{A}\boldsymbol{B}=\boldsymbol{B}\boldsymbol{A}=\boldsymbol{E}$$
+    则称矩阵$\boldsymbol{A}$是{\heiti 可逆矩阵}，并称$\boldsymbol{B}$是矩阵$\boldsymbol{A}$的{\heiti 逆矩阵}，记为$\boldsymbol{A}^{-1}$
+\end{definition}
+
+
+\begin{theorem}
+    可逆矩阵的性质：
+    \begin{enumerate}[(1)]
+        \item 可逆矩阵的逆矩阵是唯一的。
+        \item 若$\boldsymbol{A}$可逆，则$\boldsymbol{A}^{-1}$也可逆，且${(\boldsymbol{A}^{-1})}^{-1}=\boldsymbol{A}$；还有$|\boldsymbol{A}^{-1}|=|\boldsymbol{A}|^{-1}$
+        \item 若$\boldsymbol{A}$可逆，数$k\neq 0$，则$k\boldsymbol{A}$可逆，且${(k\boldsymbol{A})}^{-1}=k^{-1}\boldsymbol{A}^{-1}$
+        \item 若$\boldsymbol{A}$可逆，则$\boldsymbol{A}^\mathrm{T}$也可逆，且${(\boldsymbol{A}^\mathrm{T})}^{-1}={(\boldsymbol{A}^{-1})}^{\mathrm{T}}$
+        \item 若$\boldsymbol{A}$、$\boldsymbol{B}$为同阶可逆矩阵，则$\boldsymbol{A}\boldsymbol{B}$也可逆，且${(\boldsymbol{A}\boldsymbol{B})}^{-1}=\boldsymbol{B}^{-1}\boldsymbol{A}^{-1}$
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}[方阵的伴随矩阵]
+    设$\boldsymbol{A}=(a_{ij})$为$n$阶方阵，$A_{ij}$是$|\boldsymbol{A}|$中元素$a_{ij}$的代数余子式，则称矩阵
+    $$\boldsymbol{A}^{\ast }=\left(\begin{array}{cccc}
+        \boldsymbol{A}_{11} &  \boldsymbol{A}_{12} & \cdots & \boldsymbol{A}_{1n}\\
+        \boldsymbol{A}_{21} &  \boldsymbol{A}_{22} & \cdots & \boldsymbol{A}_{2n}\\
+        \ddots &  \ddots &  & \ddots\\
+        \boldsymbol{A}_{n1} &  \boldsymbol{A}_{n2} & \cdots & \boldsymbol{A}_{nn}\\
+    \end{array}\right)^\mathrm{T}=\left(\begin{array}{cccc}
+        \boldsymbol{A}_{11} &  \boldsymbol{A}_{21} & \cdots & \boldsymbol{A}_{n1}\\
+        \boldsymbol{A}_{12} &  \boldsymbol{A}_{22} & \cdots & \boldsymbol{A}_{n2}\\
+        \ddots &  \ddots &  & \ddots\\
+        \boldsymbol{A}_{1n} &  \boldsymbol{A}_{2n} & \cdots & \boldsymbol{A}_{nn}\\
+    \end{array}\right)$$
+    为$\boldsymbol{A}$的{\heiti 伴随矩阵}。
+\end{definition}
+\begin{remark}
+    处理遇到$\boldsymbol{A}^\ast$的题目时常用${(\boldsymbol{A}^\ast)}^{-1}=\frac{1}{|\boldsymbol{A}|}\boldsymbol{A}$
+\end{remark}
+
+\begin{theorem}[矩阵可逆的条件]
+    矩阵$\boldsymbol{A}$可逆的充要条件是$|\boldsymbol{A}|\neq 0$，且$\boldsymbol{A}^{-1}=\frac{1}{|\boldsymbol{A}|}\boldsymbol{A}^\ast$.
+\end{theorem}
+
+\begin{theorem}
+    矩阵$\boldsymbol{A}$可逆的充要条件是$\boldsymbol{A}$为满秩矩阵。
+\end{theorem}
+
+\begin{theorem}
+    设$\boldsymbol{A}$、$\boldsymbol{B}$都是$n$阶方阵，若$\boldsymbol{A}\boldsymbol{B}=\boldsymbol{E}$，则$\boldsymbol{B}\boldsymbol{A}=\boldsymbol{E}$，且$\boldsymbol{A}^{-1}=\boldsymbol{B},\boldsymbol{B}^{-1}=\boldsymbol{A}$
+\end{theorem}
+\begin{remark}
+    判断矩阵$\boldsymbol{B}$是否是矩阵$\boldsymbol{A}$的逆矩阵，只需要验证$\boldsymbol{A}\boldsymbol{B}=\boldsymbol{E}$和$\boldsymbol{B}\boldsymbol{A}=\boldsymbol{E}$中一个等式成立即可。
+\end{remark}
+
+\begin{theorem}[矩阵的分解]
+    设$\boldsymbol{A}$为$m\times n$矩阵，$\mathrm{r}(\boldsymbol{A})=r$，则存在$m$阶可逆矩阵$\boldsymbol{P}$和$n$阶可逆矩阵$\boldsymbol{Q}$，
+    使得$\boldsymbol{A}=\boldsymbol{P}\Lambda \boldsymbol{Q}$，其中
+    $$\Lambda=\left( \begin{array}{ll}
+        \boldsymbol{E}_r & \boldsymbol{O} \\
+        \boldsymbol{O} & \boldsymbol{O}_{(m-r)\times(n-r)}
+    \end{array}\right)$$
+\end{theorem}
+
+\begin{theorem}
+    任一$n$阶可逆矩阵$\boldsymbol{A}$均可以表示成有限个$n$阶初等矩阵的乘积。进一步，任一可逆矩阵可以只经过行的初等变换化为单位阵，
+    也可以只经过列的初等变换化为单位阵。
+\end{theorem}
+
+\begin{remark}
+    该定理告诉我们一个求逆矩阵的方法：将$n\times 2n$矩阵$(\boldsymbol{A}\quad\boldsymbol{E})$经过一系列行的初等变换化为$n\times 2n$矩阵$(\boldsymbol{E}\quad\boldsymbol{B})$，则
+    $\boldsymbol{B}=\boldsymbol{A}^{-1}$。
+
+    也可以用列的初等变换来求逆矩阵，即
+    $$\left(\begin{array}{c}
+        \boldsymbol{A}\\
+        \boldsymbol{E}        
+    \end{array}\right) \underrightarrow {\text{仅用初等列变换}}\left(\begin{array}{c}
+        \boldsymbol{E}\\
+        \boldsymbol{A}^{-1}        
+    \end{array}\right)$$
+
+    这种求逆的方法也可用于一类矩阵方程的求解。设$\boldsymbol{A},\boldsymbol{B}$均为$n$阶方阵，且$\boldsymbol{A}$可逆，则矩阵方程
+    $\boldsymbol{A}\boldsymbol{X}=\boldsymbol{B}$有解$\boldsymbol{X}=\boldsymbol{A}^{-1}\boldsymbol{B}$，可通过只做初等行变换
+    将$$\left(\begin{array}{cc}
+        \boldsymbol{A} & \boldsymbol{B}\\
+    \end{array}\right) \longrightarrow  \left(\begin{array}{cc}
+        \boldsymbol{E} & \boldsymbol{A}^{-1}\boldsymbol{B}\\
+    \end{array}\right)$$来得到方程的具体解$\boldsymbol{X}=\boldsymbol{A}^{-1}\boldsymbol{B}$
+
+    类似地，对矩阵方程 $\boldsymbol{X}\boldsymbol{A}=\boldsymbol{B}$的解$\boldsymbol{X}=\boldsymbol{B}\boldsymbol{A}^{-1}$，可通过只做初等列变换
+    $$\left(\begin{array}{c}
+        \boldsymbol{A} \\
+        \boldsymbol{B}
+    \end{array}\right) \longrightarrow  \left(\begin{array}{c}
+        \boldsymbol{E} \\
+        \boldsymbol{B}\boldsymbol{A}^{-1}
+    \end{array}\right)$$来得到。
+\end{remark}
+
+\begin{theorem}
+    设$\boldsymbol{A}$是$m\times n$矩阵，$\boldsymbol{P},\boldsymbol{Q}$分别是$m$和$n$阶可逆矩阵，则
+    $$\mathrm{r}(\boldsymbol{A})=\mathrm{r}(\boldsymbol{P}\boldsymbol{A})=\mathrm{r}(\boldsymbol{A}\boldsymbol{Q})=\mathrm{r}(\boldsymbol{P}\boldsymbol{A}\boldsymbol{Q})$$
+\end{theorem}
+
+\subsection{向量组的线性相关与线性无关}
