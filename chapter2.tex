@@ -548,3 +548,118 @@
 \end{theorem}
 
 \subsection{向量组的线性相关与线性无关}
+\begin{definition}[向量的线性组合，线性表示]
+    给定$n$维向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_m$和同维向量$\beta$，如果存在一组数$k_1,k_2,\cdots,k_m$，使
+    $$\beta=k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m$$
+    则称向量$\beta$是向量组$A$的一个线性组合或称向量$\beta$可由向量组$A$线性表示。
+\end{definition}
+
+\begin{definition}[等价向量组]
+    设有两个向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_m$及$B:\beta_1,\beta_2,\cdots,\beta_l$，若$A$组中的每一个向量都可以
+    由向量组$B$线性表示，则称向量组$A$可由向量组$B$线性表示。若两个向量组$A,B$可以相互线性表示，则称这两个{\heiti 向量组等价}。
+\end{definition}
+
+\begin{definition}[线性相关与线性无关]
+    给一向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_m$，如果存在不全为零的数$k_1,k_2,\cdots,k_m$，使
+    $$k_1\alpha_1+k_2\alpha_2+\cdots+k_m\alpha_m=\theta$$
+    则称向量组$A$是{\heiti 线性相关}的。如果只有当$k_1=k_2=\cdots=k_m=0$时，上述等式才成立，则称这组向量是{\heiti 线性无关}的。
+\end{definition}
+
+\begin{theorem}
+    关于线性相关与线性无关的基本结论：
+    \begin{enumerate}[(1)]
+        \item 一个向量线性相关的充要条件是$\alpha=\theta$；
+        \item 包含零向量的向量组必是线性相关的；
+        \item 如果一向量组的部分向量组线性相关，则该向量组也线性相关；
+        \item 如果一个向量组线性无关，则其中任一个部分向量组也线性无关.
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_m(m\geq 2)$线性相关的充要条件是，向量组$A$中至少有一个向量可由其余
+    $m-1$个向量线性表示。
+\end{theorem}
+
+\begin{theorem}
+    设向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关，而向量组$B:\alpha_1,\alpha_2,\cdots,\alpha_r,\beta$线性相关
+    ，则向量$\beta$必可由向量组$A$线性表示，并且表示式是唯一的。
+\end{theorem}
+
+\begin{theorem}
+    $n$维列向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_r$线性相关的充要条件是$\mathrm{r}(\boldsymbol{A})<r$，其中矩阵
+    $\boldsymbol{A}=\left(\begin{array}{cccc}
+        \alpha_1 & \alpha_2 & \cdots & \alpha_r 
+    \end{array}\right)$。换言之，该向量组$A:\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关的充要条件是$\mathrm{r}(A)=r$
+\end{theorem}
+
+\begin{theorem}
+    向量的个数$m$大于其维数$n$，则向量组线性相关。
+\end{theorem}
+
+\begin{theorem}
+    $n$个$n$维向量线性无关的充要条件是其行列式不为零。
+\end{theorem}
+
+\begin{theorem}
+    设$\boldsymbol{A}=(a_{ij})_{n\times m}$的秩$\mathrm{r}(\boldsymbol{A})=r\leq m$，且$\boldsymbol{A}$的某$r$列（行）
+    所组成的矩阵含有不等于零的$r$阶子式，则此$r$个列（行）向量线性无关。
+\end{theorem}
+
+\begin{definition}[极大无关组]
+    设$\alpha_1,\alpha_2,\cdots,\alpha_r$是某一向量组的部分组，满足
+    \begin{enumerate}[(1)]
+        \item $\alpha_1,\alpha_2,\cdots,\alpha_r$线性无关；
+        \item 在原向量组中任取向量$\alpha$，向量组$\alpha_1,\alpha_2,\cdots,\alpha_r,\alpha$都线性相关，则称向量组
+        $\alpha_1,\alpha_2,\cdots,\alpha_r$是原向量组的一个极大线性无关组，简称{\heiti 极大无关组}。
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}
+    设$\alpha_{i_1},\alpha_{i_2},\cdots,\alpha_{i_r}$是向量组$\alpha_1,\alpha_2,\cdots,\alpha_m$的一个极大线性无关组，则
+    向量组$\alpha_1,\alpha_2,\cdots,\alpha_m$中任一向量均可由$\alpha_{i_1},\alpha_{i_2},\cdots,\alpha_{i_r}$线性表示，且表示法唯一。
+\end{theorem}
+
+\begin{theorem}
+    向量组与它的任意一个极大线性无关组等价。
+\end{theorem}
+
+\begin{theorem}
+    一个向量组的各个极大无关组之间是等价的。
+\end{theorem}
+
+\begin{theorem}
+    两个向量组等价的充要条件是一组的一个极大无关组与另一组的一个极大无关组等价。
+\end{theorem}
+
+\begin{theorem}
+    一个向量组的各个极大无关组所含向量的个数相同。
+\end{theorem}
+
+\begin{definition}[向量组的秩]
+    向量组$\boldsymbol{A}:\alpha_1,\alpha_2,\cdots,\alpha_m$的一个极大无关组所含向量的个数定义为该{\heiti 向量组的秩}，记为
+    $\mathrm{r}\{\alpha_1,\alpha_2,\cdots,\alpha_m\}$。规定仅含零向量的向量组的秩为零。
+\end{definition}
+
+\begin{definition}
+    设$A:\alpha_1,\alpha_2,\cdots,\alpha_m,B:\beta_1,\beta_2,\cdots,\beta_n$是两个同维数的向量组，若向量组$A$可以由向量组
+    $B$线性表示，则必有$\mathrm{r}\{\alpha_1,\alpha_2,\cdots,\alpha_m\}\leq \mathrm{r}\{\beta_1,\beta_2,\cdots,\beta_n\}$。
+    进一步有：等价的向量组必有相同的秩。
+\end{definition}
+
+\begin{definition}
+    矩阵$\boldsymbol{A}={(a_{ij})}_{m\times n}$的行向量组$\alpha_1,\alpha_2,\cdots,\alpha_m$的秩称为矩阵$\boldsymbol{A}$的{\heiti 行秩}；
+    $\boldsymbol{A}$的列向量组$\beta_1,\beta_2,\cdots,\beta_n$的秩称为矩阵$\boldsymbol{A}$的{\heiti 列秩}.
+\end{definition}
+
+\begin{theorem}
+    任一矩阵的秩和其行秩、列秩都相等。
+\end{theorem}
+
+\begin{theorem}
+    关于矩阵和、矩阵乘积的秩的几个重要结果：
+    \begin{enumerate}[(1)]
+        \item $\mathrm{r}(\boldsymbol{A}+\boldsymbol{B})\leq \mathrm{r}(\boldsymbol{A})+\mathrm{r}(\boldsymbol{B})$；
+        \item $\mathrm{r}(\boldsymbol{A}\boldsymbol{B})\leq \min\{\mathrm{r}(\boldsymbol{A}),\mathrm{r}(\boldsymbol{B})\}$；
+        \item 若$\boldsymbol{A},\boldsymbol{B}$均为$n$阶方阵，则$\mathrm{r}(\boldsymbol{A}\boldsymbol{B})\geq \mathrm{r}(\boldsymbol{A})+\mathrm{r}(\boldsymbol{B})-n$
+    \end{enumerate}
+\end{theorem}

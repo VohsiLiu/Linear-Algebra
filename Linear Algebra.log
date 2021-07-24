@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  23 JUL 2021 22:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  24 JUL 2021 22:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1106,7 +1106,17 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 522.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 522.
- [12]) [13]
+ [12]
+Overfull \hbox (30.21495pt too wide) in paragraph at lines 563--564
+[][][]\TU/SimHei(0)/m/n/10.95 定 义 \T1/ntxtlf/b/n/10.95 2.20 (\TU/SimHei(0)/m/n/10.95 线 性 相 关 与 线 性 无 关\T1/ntxtlf/b/n/10.95 ) [][]\TU/KaiTi(0)/m/n/10.95 给 一 向 量 组 $\OML/cmm/m/it/10.95 A \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$\TU/KaiTi(0)/m/n/10.95 ，|  如 果 存 在 不 全 为 零 的 数 $\OML/cmm/m/it/10.95 k[]; k[]; []  ; k[]$\TU/KaiTi(0)/m/n/10.95 ，|
+ []
+
+[13]
+Overfull \hbox (29.63727pt too wide) in paragraph at lines 618--620
+[][][]\TU/SimHei(0)/m/n/10.95 定 理 \T1/ntxtlf/b/n/10.95 2.27 [][]\TU/KaiTi(0)/m/n/10.95 设 $\OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$ \TU/KaiTi(0)/m/n/10.95 是 向 量 组 $\OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$ \TU/KaiTi(0)/m/n/10.95 的 一 个 极 大 线 性 无 关 组，|  则 向 量 组 $\OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$
+ []
+
+) [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
  (./Linear Algebra.aux)
@@ -1124,4 +1134,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  68i,17n,126p,871b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Linear Algebra.pdf (14 pages).
+Output written on Linear Algebra.pdf (15 pages).
