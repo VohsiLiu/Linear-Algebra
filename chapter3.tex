@@ -1,0 +1,82 @@
+\section{线性方程组解的结构}
+\subsection{高斯消元法与矩阵的行变换}
+
+\begin{definition}
+    一般的线性方程组表示为
+    \begin{equation}\label{3.1}\tag{3.1}
+    \left\{\begin{array}{c}
+    a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_n=b_1\\
+    a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_n=b_2\\
+    \cdots\cdots\\
+    a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_n=b_m\\
+    \end{array}\right.\end{equation}
+    由第二章矩阵和向量的知识，线性方程组\eqref{3.1}也可表示成
+    \begin{equation}\label{3.2}\tag{3.2}
+        x_1\alpha_1+x_2\alpha_2+\cdots+x_n\alpha_n=\boldsymbol{b}
+    \end{equation}
+    其中向量
+    $$\alpha_1=\left(\begin{array}{c}
+        a_{11}\\
+        a_{21}\\
+        \vdots\\
+        a_{m1}
+    \end{array}\right),\quad
+    \alpha_2=\left(\begin{array}{c}
+        a_{12}\\
+        a_{22}\\
+        \vdots\\
+        a_{m2}
+    \end{array}\right),\quad
+    \cdots,\quad
+    \alpha_n=\left(\begin{array}{c}
+        a_{1n}\\
+        a_{2n}\\
+        \vdots\\
+        a_{mn}
+    \end{array}\right),\quad
+    \boldsymbol{b}=\left(\begin{array}{c}
+        b_{1}\\
+        b_{2}\\
+        \vdots\\
+        b_{m}
+    \end{array}\right),$$
+    求解方程组\eqref{3.1}即为求解式\eqref{3.2}，也就是求$\boldsymbol{b}$表示为$\boldsymbol{\alpha_1},\cdots,\boldsymbol{\alpha_n}$的线性组合。
+    线性方程组\eqref{3.1}还可以表示为矩阵的形式
+    \begin{equation}\label{3.3}\tag{3.3}
+        \boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}
+    \end{equation}
+    其中$$
+    \boldsymbol{A}=\left(\begin{array}{cccc}
+      a_{11} & a_{12} & \cdots & a_{1n}\\  
+      a_{21} & a_{22} & \cdots & a_{2n}\\ 
+      \vdots & \vdots &  & \vdots\\ 
+      a_{m1} & a_{m2} & \cdots & a_{mn}\\ 
+    \end{array}\right),\quad
+    \boldsymbol{x}=\left(\begin{array}{c}
+        x_1\\
+        x_2\\
+        \vdots\\
+        x_n
+    \end{array}\right),\quad
+    \boldsymbol{b}=\left(\begin{array}{c}
+        b_1\\
+        b_2\\
+        \vdots\\
+        b_m
+    \end{array}\right),
+    $$
+    称$\boldsymbol{A}$为方程组\eqref{3.1}的{\heiti 系数矩阵}，$\boldsymbol{x}$为{\heiti 未知向量}，$\boldsymbol{b}$为{\heiti 右端向量}。
+    使方程组\eqref{3.3}成立的已知向量称为该方程组的{\heiti 解向量}。将系数矩阵与右端向量合在一起构成的矩阵$\boldsymbol{B}=(\boldsymbol{A} \quad \boldsymbol{b})$，
+    称为该方程组的{\heiti 增广矩阵}，也可用增广矩阵来表示线性方程组。
+\end{definition}
+
+\begin{theorem}[高斯消元法]
+    通过一系列的行初等变换将增广矩阵$\boldsymbol{B}$变换成行简化梯形矩阵时，即可得到方程组的解。
+\end{theorem}
+
+\subsection{线性方程组的可解性}
+\begin{theorem}
+    线性方程组\eqref{3.1}有解的充要条件是系数矩阵的秩等于增广矩阵的秩.且当$\mathrm{r}(\boldsymbol{A})=\mathrm{r}(\boldsymbol{B})=n$
+    时，方程组有唯一解；而当$\mathrm{r}(\boldsymbol{A})=\mathrm{r}(\boldsymbol{B})<n$时，方程组有无穷多组解。
+\end{theorem}
+

@@ -9,3 +9,6 @@
 \contentsline {subsection}{\numberline {2.5}矩阵的秩}{11}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}可逆矩阵与伴随矩阵}{11}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}向量组的线性相关与线性无关}{13}{subsection.2.7}%
+\contentsline {section}{\numberline {3}线性方程组解的结构}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}高斯消元法与矩阵的行变换}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}线性方程组的可解性}{15}{subsection.3.2}%

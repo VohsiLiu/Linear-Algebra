@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  24 JUL 2021 22:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  25 JUL 2021 09:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1116,22 +1116,29 @@ Overfull \hbox (29.63727pt too wide) in paragraph at lines 618--620
 [][][]\TU/SimHei(0)/m/n/10.95 定 理 \T1/ntxtlf/b/n/10.95 2.27 [][]\TU/KaiTi(0)/m/n/10.95 设 $\OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$ \TU/KaiTi(0)/m/n/10.95 是 向 量 组 $\OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$ \TU/KaiTi(0)/m/n/10.95 的 一 个 极 大 线 性 无 关 组，|  则 向 量 组 $\OML/cmm/m/it/10.95 ^^K[]; ^^K[]; []  ; ^^K[]$
  []
 
-) [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
+) [14] (./chapter3.tex
+Overfull \hbox (5.59541pt too wide) in paragraph at lines 79--81
+[][][]\TU/SimHei(0)/m/n/10.95 定 理 \T1/ntxtlf/b/n/10.95 3.2 [][]\TU/KaiTi(0)/m/n/10.95 线 性 方 程 组[]有 解 的 充 要 条 件 是 系 数 矩 阵 的 秩 等 于 增 广 矩 阵 的 秩\T1/ntxtlf/m/n/10.95 . \TU/KaiTi(0)/m/n/10.95 且 当 $\OT1/cmr/m/n/10.95 r([]) = r([]) =
+ []
+
+) [15
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
  (./Linear Algebra.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 33.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `"Linear Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 31120 strings out of 479418
- 629022 string characters out of 5890305
- 1163869 words of memory out of 5000000
- 48019 multiletter control sequences out of 15000+600000
+ 31128 strings out of 479418
+ 629094 string characters out of 5890305
+ 1164869 words of memory out of 5000000
+ 48024 multiletter control sequences out of 15000+600000
  576854 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  68i,17n,126p,871b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Linear Algebra.pdf (15 pages).
+Output written on Linear Algebra.pdf (16 pages).
