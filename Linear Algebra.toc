@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {3}线性方程组解的结构}{15}{section.3}%
 \contentsline {subsection}{\numberline {3.1}高斯消元法与矩阵的行变换}{15}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}线性方程组的可解性}{15}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}线性方程组解的性质与结构}{16}{subsection.3.3}%
