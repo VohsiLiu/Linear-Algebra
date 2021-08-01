@@ -1,0 +1,100 @@
+\section{矩阵的特征值与特征向量}
+
+\subsection{相似矩阵}
+\begin{definition}[相似矩阵]
+    对于同阶方阵$\boldsymbol{A}$与$\boldsymbol{B}$，如果存在可逆矩阵$\boldsymbol{P}$，使得
+    $$\boldsymbol{B}=\boldsymbol{P}^{-1}\boldsymbol{AP}$$
+    则称$\boldsymbol{A}${\heiti 相似}于$\boldsymbol{B}$，记为$\boldsymbol{A}\sim \boldsymbol{B}$。称
+    $\boldsymbol{B}$为$\boldsymbol{A}$的{\heiti 相似矩阵}，而称$\boldsymbol{P}$为$\boldsymbol{A}$到$\boldsymbol{B}$的
+    {\heiti 相似变换矩阵}。
+\end{definition}
+
+\begin{theorem}
+    相似矩阵的性质：
+    \begin{enumerate}[(1)]
+        \item 若$\boldsymbol{A} \sim \boldsymbol{B}$，则$|\boldsymbol{A}|=|\boldsymbol{B}|$，从而$\boldsymbol{A}$与$\boldsymbol{B}$可逆性相同；
+        \item 若$\boldsymbol{A} \sim \boldsymbol{B}$，且$\boldsymbol{A}$或$\boldsymbol{B}$可逆，则$\boldsymbol{A}^{-1} \sim \boldsymbol{B}^{-1}$；
+        \item 若$\boldsymbol{A} \sim \boldsymbol{B}$，则$\boldsymbol{A}^n \sim \boldsymbol{B}^n,k\boldsymbol{A} \sim k\boldsymbol{B}$，其中$n$为自然数，$k$为任意实数；
+        \item 若$\boldsymbol{A} \sim \boldsymbol{B}$，则$f(\boldsymbol{A})\sim f(\boldsymbol{B})$，其中$f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$为任意多项式。
+    \end{enumerate}
+\end{theorem}
+
+\subsection{特征值与特征向量}
+\begin{definition}[特征值、特征向量]
+    设$\boldsymbol{A}$是实数域$\mathbf{R}$或复数域$\mathbf{C}$上的一个方阵，$\lambda\in \mathbf{C}$，若
+    存在非零向量$\boldsymbol{\xi }$使得$\boldsymbol{A}\boldsymbol{\xi}=\lambda\boldsymbol{\xi}$，则称
+    $\lambda$为矩阵$\boldsymbol{A}$的{\heiti 特征值}，$\boldsymbol{\xi}$称为$\boldsymbol{A}$的属于特征值
+    $\lambda$的{\heiti 特征向量}.
+\end{definition}
+
+\begin{theorem}
+    设方阵$\boldsymbol{A}$有特征值$\lambda$，$\boldsymbol{\xi_1},\boldsymbol{\xi_2}$为属于$\lambda$的特征向量，则它们的任意不等于零向量的线性组合
+    $\boldsymbol{\eta}=k_1\boldsymbol{\xi_1}+k_2\boldsymbol{\xi_2}(k_1,k_2\in \mathbf{R})$仍是属于$\lambda$的特征向量。
+\end{theorem}
+
+\begin{definition}[特征多项式、特征方程、特征矩阵]
+    $|\lambda\boldsymbol{E}-\boldsymbol{A}|$称为$\boldsymbol{A}$的{\heiti 特征多项式}；方程$|\lambda\boldsymbol{E}-\boldsymbol{A}|=0$称为$\boldsymbol{A}$
+    的{\heiti 特征方程}。方程$|\lambda\boldsymbol{E}-\boldsymbol{A}|=0$的解也称为$\boldsymbol{A}$的{\heiti 特征根}.而$\lambda\boldsymbol{E}-\boldsymbol{A}$
+    称为$\boldsymbol{A}$的{\heiti 特征矩阵}。
+\end{definition}
+
+
+\begin{theorem}
+    求矩阵$\boldsymbol{A}$的全部特征值和特征向量的计算步骤：
+
+    （1）计算行列式$|\lambda\boldsymbol{E}-\boldsymbol{A}|$，并求出$|\lambda\boldsymbol{E}-\boldsymbol{A}|=0$的全部根，即$\boldsymbol{A}$的特征值；
+    
+    （2）对于每个特征值$\lambda_i$，求齐次线性方程组$$(\lambda_i\boldsymbol{E}-\boldsymbol{A})\boldsymbol{x}=\boldsymbol{\theta}$$的一个基础解系$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_{s_i}}$；
+
+    （3）写出$\boldsymbol{A}$属于$\lambda_i$的全部特征向量为$$k_1\boldsymbol{\alpha_1}+k_2\boldsymbol{\alpha_2}+\cdots+k_{s_i}\boldsymbol{\alpha_{s_i}}$$
+    其中$k_1,k_2,\cdots,k_{s_i}$为不全为零的任意常数。而所求得的所有特征值的所有特征向量，就是$\boldsymbol{A}$的全部特征向量。
+\end{theorem}
+
+\begin{remark}
+    对于重特征值$\lambda$，虽然有多个属于$\lambda$的线性无关的特征向量，但其个数不会超过$\lambda$的重数。对于单特征值，有且只有一个线性无关的特征向量。
+\end{remark}
+
+\begin{theorem}
+    若$f(x)$为$x$的多项式，矩阵$\boldsymbol{A}$有特征值$\lambda$，则$f(\boldsymbol{A})$有特征值$f(\lambda)$。
+\end{theorem}
+\begin{remark}
+    若该定理中矩阵$\boldsymbol{A}$的所有特征值为$\lambda_1,\cdots,\lambda_n$（包括相同的特征值），则$f(\boldsymbol{A})$
+    的所有特征值为$f(\lambda_1),\cdots,f(\lambda_n)$.
+\end{remark}
+\begin{remark}
+    若$n$阶可逆方阵$\boldsymbol{A}$的所有特征值为$\lambda_1,\cdots,\lambda_n$（包括相同的特征值），则$\lambda_i\neq 0,i=1,2,\cdots,n$，
+    且矩阵$\boldsymbol{A}^{-1}$的所有特征值为$\lambda_1^{-1},\cdots,\lambda_n^{-1}$.
+\end{remark}
+\begin{remark}
+    不可逆方阵$\boldsymbol{A}$必有0特征值.
+\end{remark}
+
+\begin{theorem}
+    相似矩阵具有相同的特征多项式，从而它们具有相同的特征值。
+\end{theorem}
+
+\begin{definition}[迹]
+    定义$$\mathrm{tr}(\boldsymbol{A})=\sum_{i=1}^n a_{ii}$$
+    为矩阵$\boldsymbol{A}=(a_{ij})_{n\times n}$的迹。
+\end{definition}
+
+\begin{theorem}
+    若$n$阶矩阵$\boldsymbol{A}$的特征值为$\lambda_1,\cdots,\lambda_n$，则有
+    $$\mathrm{tr}(\boldsymbol{A})=\sum_{i=1}^n \lambda_i,\quad |\boldsymbol{A}|=\prod_{i=1}^n \lambda_i$$
+\end{theorem}
+
+\begin{theorem}
+    相似矩阵具有相同的迹和相同的行列式.
+\end{theorem}
+
+\begin{theorem}
+    设$\boldsymbol{A}$是一个快对角矩阵
+    $$\boldsymbol{A}=\left(\begin{array}{cccc}
+        \boldsymbol{A_1} & & & \\
+         & \boldsymbol{A_2}& & \\
+         & & \ddots & \\
+         & & & \boldsymbol{A_m}\\
+    \end{array}\right)$$
+    则$\boldsymbol{A}$的特征多项式是$\boldsymbol{A_1},\boldsymbol{A_2},\cdots,\boldsymbol{A_m}$的特征多项式的乘积，
+    于是$\boldsymbol{A_1},\boldsymbol{A_2},\cdots,\boldsymbol{A_m}$的所有特征值就是$\boldsymbol{A}$的所有特征值。
+\end{theorem}
