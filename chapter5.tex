@@ -1,0 +1,253 @@
+\section{实二次型}
+\subsection{二次型的化简}
+\begin{definition}[二次型]
+    含有$n$个实变量$x_1,x_2,\cdots,x_n$的在某个数域上的二次齐次多项式
+    \begin{equation}\label{5.1}\tag{5.1}
+        \begin{split}
+        f(x_1,x_2,\cdots,x_n)=a_{11}x_1^2+2a_{12}x_1x_2+2a_{13}x_1x_3+\cdots+2&a_{1n}x_1x_n \\
+        +a_{22}x_2^2+2a_{23}x_2x_3+\cdots+2&a_{2n}x_2x_n\\
+        &+\cdots\\
+        &+a_{nn}x_n^2
+        \end{split}
+    \end{equation}
+    称为{\heiti 二次型}：若全部$a_{ij}\in \mathbf{R}$，则称式\eqref{5.1}中的$f$为{\heiti 实二次型}；
+    若全部$a_{ij}\in \mathbf{C}$，则称式\eqref{5.1}中的$f$为{\heiti 复二次型}.
+\end{definition}
+
+\begin{definition}
+    若记
+    $$\boldsymbol{x}=\left(\begin{array}{c}
+        x_1\\
+        x_2\\
+        \vdots\\
+        x_n
+    \end{array}\right),\quad
+    \boldsymbol{A}=\left(\begin{array}{cccc}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots &  &\vdots\\
+        a_{n1} & a_{n2} & \cdots & a_{nn}
+    \end{array}\right)$$
+    则二次型\eqref{5.1}可简洁地记为
+    \begin{equation}\label{5.2}\tag{5.2}
+        f(x_1,x_2,\cdots,x_n)=\boldsymbol{x}^\mathrm{T}\boldsymbol{A}\boldsymbol{x}
+    \end{equation}
+    称之为{\heiti 二次型$f$的矩阵表示}，其中$\boldsymbol{A}$是对称矩阵。
+\end{definition}
+
+\begin{definition}[二次型的矩阵]
+    称\eqref{5.2}中的对称矩阵$\boldsymbol{A}$为{\heiti 二次型$f$的矩阵}，$\boldsymbol{A}$的秩称为{\heiti 二次型$f$的秩}.
+\end{definition}
+
+\begin{definition}[线性变换、非退化线性变换]
+    称如下的变换
+    $$\left\{\begin{array}{l}
+            x_1=c_{11}y_1+c_{12}y_2+\cdots+c_{1n}y_n,\\
+            x_2=c_{21}y_1+c_{22}y_2+\cdots+c_{2n}y_n,\\
+            \cdots\cdots\\
+            x_n=c_{n1}y_1+c_{n2}y_2+\cdots+c_{nn}y_n,
+        \end{array}\right.$$
+    为由$x_1,x_2,\cdots,x_n$到$y_1,y_2,\cdots,y_n$的一个{\heiti 线性变换}.
+
+    若线性变换的系数行列式
+    $$|\boldsymbol{P}|=\left|\begin{array}{cccc}
+        c_{11} & c_{12} & \cdots & c_{1n}\\
+        c_{21} & c_{22} & \cdots & c_{2n}\\
+        \vdots & \vdots &  &\vdots\\
+        c_{n1} & c_{n2} & \cdots & c_{nn}
+    \end{array}\right|\neq 0$$
+    则称该线性变换为{\heiti 非异线性变换}或{\heiti 非退化线性变换}.\\
+    若$|\boldsymbol{P}|=0$，则称该线性变换为{\heiti 奇异线性变换}或{\heiti 退化线性变换}.\\
+    若$\boldsymbol{P}$为正交矩阵，则称该线性变换为{\heiti 正交变换}.
+\end{definition}
+
+\begin{definition}[合同、合同变换]
+    设$\boldsymbol{A}$和$\boldsymbol{B}$是两个同阶方阵，若存在一个可逆矩阵$\boldsymbol{P}$，使得有$\boldsymbol{B}=\boldsymbol{P}^\mathrm{T}\boldsymbol{A}\boldsymbol{P}$，
+    则称$\boldsymbol{A}${\heiti 合同}于$\boldsymbol{B}$.称$\boldsymbol{B}$为$\boldsymbol{A}$的{\heiti 合同矩阵}，而称$\boldsymbol{P}$为$\boldsymbol{A}$到$\boldsymbol{B}$
+    的{\heiti 合同变换矩阵}.
+\end{definition}
+
+\begin{definition}[二次型的标准形]
+    二次型$f(x_1,x_2,\cdots,x_n)$经过非退化线性变换后得到一个只包含变量平方项的二次型$d_1y_1^2+d_2y_2^2+\cdots+d_ny_n^2$，称为原二次型的{\heiti 标准形}.
+\end{definition}
+
+\begin{theorem}
+    存在非退化的线性变换将实二次型化为标准形，且平方项系数可以任意次序排列；存在可逆矩阵将实对称矩阵合同变换为实对角矩阵，且对角元素可以任意次序排列.
+\end{theorem}
+
+\begin{theorem}
+    化实二次型为标准形的方法，即用正交矩阵将实对称矩阵对角化的方法步骤：
+
+    设$\boldsymbol{A}$为实二次型$f(\boldsymbol{x})$的矩阵。
+
+    （1）求解矩阵$\boldsymbol{A}$的特征方程$$|\lambda\boldsymbol{E}-\boldsymbol{A}|=0$$
+    解得特征值$\lambda=\lambda_1,\lambda_2,\cdots,\lambda_r$；
+
+
+    （2）对每一个特征值$\lambda=\lambda_i(s_i\mbox{重})$，求出齐次线性方程组
+    $$(\lambda_i\boldsymbol{E}-\boldsymbol{A})\boldsymbol{x}=\boldsymbol{\theta}$$
+    的基础解系（即特征向量的极大无关组）$\boldsymbol{\xi}_{i_1},\cdots,\boldsymbol{\xi}_{i_{s_i}}$。并标准正交化为
+    $$\boldsymbol{\eta}_{i_1},\cdots,\boldsymbol{\eta}_{i_{s_i}}$$
+
+    （3）将标准正交化的特征向量作为列构成正交矩阵
+    $$\boldsymbol{P}=(\boldsymbol{\eta}_1\quad \cdots\quad \boldsymbol{\eta_n})$$
+    则非退化线性变换$\boldsymbol{x}=\boldsymbol{P}\boldsymbol{y}$将实二次型$f(\boldsymbol{x})$化为标准形
+    $$f(\boldsymbol{x})=g(\boldsymbol{y})=\boldsymbol{y}^\mathrm{T}\boldsymbol{\varLambda} \boldsymbol{y}$$
+    其中$\boldsymbol{\varLambda} =\mathrm{diag}(\lambda_1,\cdots,\lambda_1,\lambda_2,\cdots,\lambda_2,\cdots,\lambda_r,\cdots,\lambda_r)$
+\end{theorem}
+
+\begin{theorem}
+    对一般二次型采用配方法化为标准形的步骤：
+
+    设二次型为$$f(x_1,x_2,\cdots,x_n)=a_{11}x_1^2+2a_{12}x_1x_2+\cdots+2a_{1n}x_1x_n+a_{22}x_2^2+2a_{23}x_2x_3+\cdots+a_{nn}x_n^2$$
+    反复对可能出现的以下两种情况进行处理.
+
+    {\heiti 情况1}$\quad$式中有非零平方项。例如若非零平方项为$a_{11}x_1^2$，则将式中所有含$x_1$的项配成一个平方项
+    $\displaystyle{}{a_{11}{\left(x_1+\frac{a_{12}}{a_{11}}x_2+\cdots+\frac{a_{1n}}{a_{11}}x_n\right)}^2}$，并令非退化线性变换为
+    $$\left\{\begin{array}{l}
+        \displaystyle{y_1=x_1+\frac{a_{12}}{a_{11}}x_2+\cdots+\frac{a_{1n}}{a_{11}}x_n}\\
+        y_2=x_2\\
+        \cdots\\
+        y_n=x_n
+    \end{array}\right.$$
+    则可将原式化为不含$x_1$也不含$y_1$的交叉项的式子.
+
+    {\heiti 情况2}$\quad$式中无非零平方项。这时可以用一个线性变换配出平方项。例如，若有非零交叉项为
+    $2a_{12}x_1x_2$，则可作如下非退化线性变换
+    $$\left\{\begin{array}{l}
+        x_1=y_1+y_2\\
+        x_2=y_1-y_2\\
+        x_3=y_3\\
+        \cdots\\
+        x_n=y_n
+    \end{array}\right.$$
+    就可将原式化为含有$y_1,y_2$的平方项的式子.再按情况1进行处理。
+
+    每配成一个平方项，就消去一个元素如与$x_1$相关的所有交叉项，直到一系列的变换将所有的交叉项均消去即成标准形。
+    配方法所得的非退化线性变换在实际操作中可在所有配方配成后一次性求出。
+\end{theorem}
+
+\begin{theorem}[合同变换法]
+    可用初等变换为工具将二次型化为标准形：
+
+    设二次型矩阵为
+    $$\boldsymbol{A}=\left(\begin{array}{cccc}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots & \vdots &  &\vdots\\
+        a_{n1} & a_{n2} & \cdots & a_{nn} 
+    \end{array}\right)$$
+    对矩阵$$\boldsymbol{B}=\left(\begin{array}{c}
+        \boldsymbol{A}\\
+        \boldsymbol{E}
+    \end{array}\right)$$
+    做一次列初等变换后接着做一次相应的行初等变换，重复这种做法，直到得到如下形式的矩阵
+    $$\left(\begin{array}{c}
+        \boldsymbol{\Lambda}\\
+        \boldsymbol{P}
+    \end{array}\right)$$
+    其中$\boldsymbol{\Lambda}$为对角矩阵.因为
+    $$\left(\begin{array}{cc}
+        \boldsymbol{P}^\mathrm{T} & \\
+        & \boldsymbol{E}
+    \end{array}\right)
+    \left(\begin{array}{c}
+        \boldsymbol{A}\\
+        \boldsymbol{E}
+    \end{array}\right)\boldsymbol{P}=\left(\begin{array}{c}
+        \boldsymbol{P}^\mathrm{T}\boldsymbol{A}\boldsymbol{P}\\
+        \boldsymbol{P}
+    \end{array}\right)=\left(\begin{array}{c}
+        \boldsymbol{\Lambda}\\
+        \boldsymbol{P}
+    \end{array}\right)$$
+    所以可用非退化线性变换$\boldsymbol{x}=\boldsymbol{P}\boldsymbol{y}$，将二次型化为标准形：
+    $$f(\boldsymbol{x})=g(\boldsymbol{y})=\boldsymbol{y}^\mathrm{T}\boldsymbol{\Lambda}\boldsymbol{y}$$
+
+    上述变换称之为合同变换法。实际使用时通常是先用若干次列初等变换将某行非对角元化为0,
+    再依次做同样次数的相应行初等变换，反复进行．
+\end{theorem}
+
+\begin{definition}[实（复）二次型的规范形]
+        实二次型$f(x_1,x_2,\cdots,x_n)$经过非退化的实线性变换得到如下形式的二次型
+        $$z_1^2+\cdots+z_p^2-z_{p+1}^2-\cdots-z_r^2,r\leq n$$
+        称为原二次型的{\heiti 实规范形}，$r$称为该{\heiti 二次型的秩}；复二次型$f(x_1,x_2,\cdots,x_n)$经过非退化的复线性变换得到如下形式的二次型
+        $$z_1^2+z_2^2+\cdots+z_r^2,r\leq n$$
+        称为原二次型的{\heiti 复规范形}，$r$称为该二次型的秩。
+\end{definition}
+
+\begin{theorem}
+    存在非退化的复线性变换将复二次型化为复规范形
+    $$z_1^2+z_2^2+\cdots+z_r^2;$$
+    存在复可逆矩阵将复对称矩阵合同变换为$\mathrm{diag}(\boldsymbol{E}_r,\boldsymbol{O}_{n-r})$，其中$r$为二次型矩阵的秩。
+\end{theorem}
+
+\begin{theorem}[惯性定理]
+    存在非退化的实线性变换将实二次型化为实规范形
+    $$z_1^2+\cdots+z_p^2-z_{p+1}^2-\cdots-z_r^2;$$
+    存在实可逆矩阵将实对称矩阵合同变换为$\mathrm{diag}(\boldsymbol{E}_p,-\boldsymbol{E}_{r-p},\boldsymbol{O}_{n-r})$，其中$r$为实二次型
+    矩阵的秩，$p$是唯一确定的。
+\end{theorem}
+
+\begin{definition}[正惯性指数、负惯性指数]
+    若实二次型的实规范形为
+    $$z_1^2+\cdots+z_p^2-z_{p+1}^2-\cdots-z_r^2,\quad r\leq n$$
+    则称$p$为原二次型的{\heiti 正惯性指数}；称$r-p$为原二次型的{\heiti 负惯性指数}.
+\end{definition}
+
+\begin{theorem}
+    若实二次型矩阵$\boldsymbol{A}$合同于对角矩阵$\boldsymbol{B}=\mathrm{diag}(b_{11},\cdots,b_{nn})$，则正对角元个数为实二次型的
+    正惯性指数，负对角元个数为实二次型的负惯性指数，非零对角元个数为二次型的秩。
+\end{theorem}
+
+\begin{theorem}
+    实二次型矩阵$\boldsymbol{A}$的正特征值个数为正惯性指数，负特征值个数为负惯性指数，非零特征值个数为二次型的秩．
+\end{theorem}
+
+\subsection{正定二次型}
+\begin{definition}[正定二次型、正定矩阵]
+    设$f(\boldsymbol{x})=\boldsymbol{x}^\mathrm{T}\boldsymbol{A}\boldsymbol{x}$为实二次型，若当实向量$\boldsymbol{x}\neq \theta$时都有
+    $\boldsymbol{x}^\mathrm{T}\boldsymbol{A}\boldsymbol{x}>0$，则称$f$为{\heiti 正定二次型}，称$\boldsymbol{A}$为{\heiti 正定矩阵}；\\
+    当$\boldsymbol{x}\neq \theta$时都有$\boldsymbol{x}^\mathrm{T}\boldsymbol{A}\boldsymbol{x}<0$，则称$f$为{\heiti 负定二次型}，称$\boldsymbol{A}$为{\heiti 负定矩阵}；\\
+    当$\boldsymbol{x}\neq \theta$时都有$\boldsymbol{x}^\mathrm{T}\boldsymbol{A}\boldsymbol{x}\geq 0$，则称$f$为{\heiti 半正定二次型}，称$\boldsymbol{A}$为{\heiti 半正定矩阵}；\\
+    当$\boldsymbol{x}\neq \theta$时都有$\boldsymbol{x}^\mathrm{T}\boldsymbol{A}\boldsymbol{x}\leq 0$，则称$f$为{\heiti 半负定二次型}，称$\boldsymbol{A}$为{\heiti 半负定矩阵}.
+\end{definition}
+
+\begin{definition}[矩阵的顺序主子式和主子式]
+    矩阵$\boldsymbol{A}=(a_{ij})_{n\times n}$的左上角$i$行$i$列$(1\leq i\leq n)$构成的行列式
+    $$\left|\begin{array}{ccc}
+        a_{11} & \cdots &a_{1i}\\
+        \vdots & &\vdots\\
+        a_{i1} & \cdots & a_{ii}
+    \end{array}\right|$$
+    称为矩阵$\boldsymbol{A}$的{\heiti $i$阶顺序主子式}。矩阵$\boldsymbol{A}$的$i_1,i_2,\cdots,i_k$行和$i_1,i_2,\cdots,i_k$列$(1\leq i_1<i_2<\cdots<i_k\leq n)$
+    的元素构成的行列式
+    $$\left|\begin{array}{cccc}
+        a_{i_1i_1} & a_{i_1i_2} & \cdots & a_{i_1i_k}\\
+        a_{i_2i_1} & a_{i_2i_2} & \cdots & a_{i_2i_k}\\
+        \vdots & \vdots &  &\vdots\\
+        a_{i_ki_1} & a_{i_ki_2} & \cdots & a_{i_ki_k}
+    \end{array}\right|$$
+    称为矩阵$\boldsymbol{A}$的{\heiti $k$阶主子式}。
+\end{definition}
+
+\begin{theorem}
+    若$\boldsymbol{A}$为$n$阶的实对称矩阵，则下列条件互为等价：
+    \begin{enumerate}[(1)]
+        \item $\boldsymbol{A}$为正定矩阵；
+        \item $\boldsymbol{A}$的特征值均为正；
+        \item $\boldsymbol{A}$的正惯性指数为$n$；
+        \item $\boldsymbol{A}$的各阶顺序主子式均为正.
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    若$\boldsymbol{A}$为实对称矩阵，则下列条件互为等价：
+    \begin{enumerate}[(1)]
+        \item $\boldsymbol{A}$为半正定矩阵；
+        \item $\boldsymbol{A}$的特征值均大于等于零；
+        \item $\boldsymbol{A}$的正惯性指数为$\mathrm{r}(\boldsymbol{A})$；
+        \item $\boldsymbol{A}$的各阶主子式非负.
+    \end{enumerate}
+\end{theorem}
+

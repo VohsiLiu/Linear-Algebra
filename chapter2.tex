@@ -373,10 +373,10 @@
 \begin{theorem}[矩阵的化简]
     设$\boldsymbol{A}$为$m\times n$矩阵，则
     \begin{enumerate}[(1)]
-        \item 存在$m$阶初等矩阵$\boldsymbol{P_1},\boldsymbol{P_2},\cdots,\boldsymbol{P_s}$使$\boldsymbol{P_s}\boldsymbol{P_{s-1}}\cdots\boldsymbol{P_2}\boldsymbol{P_1}\boldsymbol{A}$（即
+        \item 存在$m$阶初等矩阵$\boldsymbol{P}_1,\boldsymbol{P}_2,\cdots,\boldsymbol{P}_s$使$\boldsymbol{P}_s\boldsymbol{P}_{s-1}\cdots\boldsymbol{P}_2\boldsymbol{P}_1\boldsymbol{A}$（即
         对$\boldsymbol{A}$施加有限次的初等行变换）成为$m\times n$阶行简化梯形矩阵。
 
-        也存在$n$阶初等矩阵$\boldsymbol{Q_1},\boldsymbol{Q_2},\cdots,\boldsymbol{Q_t}$使$\boldsymbol{A}\boldsymbol{Q_1}\boldsymbol{Q_2}\cdots\boldsymbol{Q_{t-1}}\boldsymbol{Q_t}$（即
+        也存在$n$阶初等矩阵$\boldsymbol{Q}_1,\boldsymbol{Q}_2,\cdots,\boldsymbol{Q}_t$使$\boldsymbol{A}\boldsymbol{Q}_1\boldsymbol{Q}_2\cdots\boldsymbol{Q}_{t-1}\boldsymbol{Q}_t$（即
         对$\boldsymbol{A}$施加有限次的初等行变换）成为$m\times n$阶列简化梯形矩阵。
         \item 可以经过有限次初等行变换和初等列变换，将矩阵$\boldsymbol{A}$化为标准型。
     \end{enumerate}
@@ -549,19 +549,19 @@
 
 \subsection{向量组的线性相关与线性无关}
 \begin{definition}[向量的线性组合，线性表示]
-    给定$n$维向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$和同维向量$\boldsymbol{\beta}$，如果存在一组数$k_1,k_2,\cdots,k_m$，使
-    $$\boldsymbol{\beta}=k_1\boldsymbol{\alpha_1}+k_2\boldsymbol{\alpha_2}+\cdots+k_m\boldsymbol{\alpha_m}$$
+    给定$n$维向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$和同维向量$\boldsymbol{\beta}$，如果存在一组数$k_1,k_2,\cdots,k_m$，使
+    $$\boldsymbol{\beta}=k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_m\boldsymbol{\alpha}_m$$
     则称向量$\boldsymbol{\beta}$是向量组$A$的一个线性组合或称向量$\boldsymbol{\beta}$可由向量组$A$线性表示。
 \end{definition}
 
 \begin{definition}[等价向量组]
-    设有两个向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$及$B:\boldsymbol{\beta_1},\boldsymbol{\beta_2},\cdots,\boldsymbol{\beta_l}$，若$A$组中的每一个向量都可以
+    设有两个向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$及$B:\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_l$，若$A$组中的每一个向量都可以
     由向量组$B$线性表示，则称向量组$A$可由向量组$B$线性表示。若两个向量组$A,B$可以相互线性表示，则称这两个{\heiti 向量组等价}。
 \end{definition}
 
 \begin{definition}[线性相关与线性无关]
-    给一向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$，如果存在不全为零的数$k_1,k_2,\cdots,k_m$，使
-    $$k_1\boldsymbol{\alpha_1}+k_2\boldsymbol{\alpha_2}+\cdots+k_m\boldsymbol{\alpha_m}=\boldsymbol{\theta}$$
+    给一向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$，如果存在不全为零的数$k_1,k_2,\cdots,k_m$，使
+    $$k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2+\cdots+k_m\boldsymbol{\alpha}_m=\boldsymbol{\theta}$$
     则称向量组$A$是{\heiti 线性相关}的。如果只有当$k_1=k_2=\cdots=k_m=0$时，上述等式才成立，则称这组向量是{\heiti 线性无关}的。
 \end{definition}
 
@@ -576,20 +576,20 @@
 \end{theorem}
 
 \begin{theorem}
-    向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}(m\geq 2)$线性相关的充要条件是，向量组$A$中至少有一个向量可由其余
+    向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m(m\geq 2)$线性相关的充要条件是，向量组$A$中至少有一个向量可由其余
     $m-1$个向量线性表示。
 \end{theorem}
 
 \begin{theorem}
-    设向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r}$线性无关，而向量组$B:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r},\boldsymbol{\beta}$线性相关
+    设向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r$线性无关，而向量组$B:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r,\boldsymbol{\beta}$线性相关
     ，则向量$\boldsymbol{\beta}$必可由向量组$A$线性表示，并且表示式是唯一的。
 \end{theorem}
 
 \begin{theorem}
-    $n$维列向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r}$线性相关的充要条件是$\mathrm{r}(\boldsymbol{A})<r$，其中矩阵
+    $n$维列向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r$线性相关的充要条件是$\mathrm{r}(\boldsymbol{A})<r$，其中矩阵
     $\boldsymbol{A}=\left(\begin{array}{cccc}
-        \boldsymbol{\alpha_1} & \boldsymbol{\alpha_2} & \cdots & \boldsymbol{\alpha_r} 
-    \end{array}\right)$。换言之，该向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r}$线性无关的充要条件是$\mathrm{r}(A)=r$
+        \boldsymbol{\alpha}_1 & \boldsymbol{\alpha}_2 & \cdots & \boldsymbol{\alpha}_r 
+    \end{array}\right)$。换言之，该向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r$线性无关的充要条件是$\mathrm{r}(\boldsymbol{A})=r$
 \end{theorem}
 
 \begin{theorem}
@@ -606,17 +606,17 @@
 \end{theorem}
 
 \begin{definition}[极大无关组]
-    设$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r}$是某一向量组的部分组，满足
+    设$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r$是某一向量组的部分组，满足
     \begin{enumerate}[(1)]
-        \item $\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r}$线性无关；
-        \item 在原向量组中任取向量$\boldsymbol{\alpha}$，向量组$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r},\boldsymbol{\alpha}$都线性相关，则称向量组
-        $\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_r}$是原向量组的一个极大线性无关组，简称{\heiti 极大无关组}。
+        \item $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r$线性无关；
+        \item 在原向量组中任取向量$\boldsymbol{\alpha}$，向量组$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r,\boldsymbol{\alpha}$都线性相关，则称向量组
+        $\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_r$是原向量组的一个极大线性无关组，简称{\heiti 极大无关组}。
     \end{enumerate}
 \end{definition}
 
 \begin{theorem}
-    设$\boldsymbol{\alpha_{i_1}},\boldsymbol{\alpha_{i_2}},\cdots,\boldsymbol{\alpha_{i_r}}$是向量组$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$的一个极大线性无关组，则
-    向量组$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$中任一向量均可由$\boldsymbol{\alpha_{i_1}},\boldsymbol{\alpha_{i_2}},\cdots,\boldsymbol{\alpha_{i_r}}$线性表示，且表示法唯一。
+    设$\boldsymbol{\alpha}_{i_1},\boldsymbol{\alpha}_{i_2},\cdots,\boldsymbol{\alpha}_{i_r}$是向量组$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$的一个极大线性无关组，则
+    向量组$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$中任一向量均可由$\boldsymbol{\alpha}_{i_1},\boldsymbol{\alpha}_{i_2},\cdots,\boldsymbol{\alpha}_{i_r}$线性表示，且表示法唯一。
 \end{theorem}
 
 \begin{theorem}
@@ -636,19 +636,19 @@
 \end{theorem}
 
 \begin{definition}[向量组的秩]
-    向量组$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$的一个极大无关组所含向量的个数定义为该{\heiti 向量组的秩}，记为
-    $\mathrm{r}\{\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}\}$。规定仅含零向量的向量组的秩为零。
+    向量组$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$的一个极大无关组所含向量的个数定义为该{\heiti 向量组的秩}，记为
+    $\mathrm{r}\{\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m\}$。规定仅含零向量的向量组的秩为零。
 \end{definition}
 
 \begin{definition}
-    设$A:\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m},B:\boldsymbol{\beta_1},\boldsymbol{\beta_2},\cdots,\boldsymbol{\beta_n}$是两个同维数的向量组，若向量组$A$可以由向量组
-    $B$线性表示，则必有$\mathrm{r}\{\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}\}\leq \mathrm{r}\{\boldsymbol{\beta_1},\boldsymbol{\beta_2},\cdots,\boldsymbol{\beta_n}\}$。
+    设$A:\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m,B:\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_n$是两个同维数的向量组，若向量组$A$可以由向量组
+    $B$线性表示，则必有$\mathrm{r}\{\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m\}\leq \mathrm{r}\{\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_n\}$。
     进一步有：等价的向量组必有相同的秩。
 \end{definition}
 
 \begin{definition}
-    矩阵$\boldsymbol{A}={(a_{ij})}_{m\times n}$的行向量组$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots,\boldsymbol{\alpha_m}$的秩称为矩阵$\boldsymbol{A}$的{\heiti 行秩}；
-    $\boldsymbol{A}$的列向量组$\boldsymbol{\beta_1},\boldsymbol{\beta_2},\cdots,\boldsymbol{\beta_n}$的秩称为矩阵$\boldsymbol{A}$的{\heiti 列秩}.
+    矩阵$\boldsymbol{A}={(a_{ij})}_{m\times n}$的行向量组$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots,\boldsymbol{\alpha}_m$的秩称为矩阵$\boldsymbol{A}$的{\heiti 行秩}；
+    $\boldsymbol{A}$的列向量组$\boldsymbol{\beta}_1,\boldsymbol{\beta}_2,\cdots,\boldsymbol{\beta}_n$的秩称为矩阵$\boldsymbol{A}$的{\heiti 列秩}.
 \end{definition}
 
 \begin{theorem}

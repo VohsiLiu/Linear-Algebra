@@ -12,23 +12,23 @@
     \end{array}\right.\end{equation}
     由第二章矩阵和向量的知识，线性方程组\eqref{3.1}也可表示成
     \begin{equation}\label{3.2}\tag{3.2}
-        x_1\boldsymbol{\alpha_1}+x_2\boldsymbol{\alpha_2}+\cdots+x_n\boldsymbol{\alpha_n}=\boldsymbol{b}
+        x_1\boldsymbol{\alpha}_1+x_2\boldsymbol{\alpha}_2+\cdots+x_n\boldsymbol{\alpha}_n=\boldsymbol{b}
     \end{equation}
     其中向量
-    $$\boldsymbol{\alpha_1}=\left(\begin{array}{c}
+    $$\boldsymbol{\alpha}_1=\left(\begin{array}{c}
         a_{11}\\
         a_{21}\\
         \vdots\\
         a_{m1}
     \end{array}\right),\quad
-    \boldsymbol{\alpha_2}=\left(\begin{array}{c}
+    \boldsymbol{\alpha}_2=\left(\begin{array}{c}
         a_{12}\\
         a_{22}\\
         \vdots\\
         a_{m2}
     \end{array}\right),\quad
     \cdots,\quad
-    \boldsymbol{\alpha_n}=\left(\begin{array}{c}
+    \boldsymbol{\alpha}_n=\left(\begin{array}{c}
         a_{1n}\\
         a_{2n}\\
         \vdots\\
@@ -40,7 +40,7 @@
         \vdots\\
         b_{m}
     \end{array}\right),$$
-    求解方程组\eqref{3.1}即为求解式\eqref{3.2}，也就是求$\boldsymbol{b}$表示为$\boldsymbol{\alpha_1},\cdots,\boldsymbol{\alpha_n}$的线性组合。
+    求解方程组\eqref{3.1}即为求解式\eqref{3.2}，也就是求$\boldsymbol{b}$表示为$\boldsymbol{\alpha}_1,\cdots,\boldsymbol{\alpha}_n$的线性组合。
     线性方程组\eqref{3.1}还可以表示为矩阵的形式
     \begin{equation}\label{3.3}\tag{3.3}
         \boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}
@@ -82,8 +82,8 @@
 
 \subsection{线性方程组解的性质与结构}
 \begin{theorem}
-    若$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2}$是方程组$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{\theta}$的解，则其线性组合
-    $k_1\boldsymbol{\alpha_1}+k_2\boldsymbol{\alpha_2}$也是该方程组的解。
+    若$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2$是方程组$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{\theta}$的解，则其线性组合
+    $k_1\boldsymbol{\alpha}_1+k_2\boldsymbol{\alpha}_2$也是该方程组的解。
 \end{theorem}
 
 \begin{definition}[齐次线性方程组、基础解系]
@@ -122,9 +122,9 @@
     \end{array}$$
     其中最后一行是矩阵所在列的列标号。对$n-r$个自由变量$x_2,\cdots,x_{i_2-1},x_{i_2+1},\cdots, x_{i_r-1}, x_{i_r+1},\cdots, x_n $分别取$n-r$
     组数据$(1,0,\cdots,0),(0,1,0,\cdots,0),\cdots,(0,\cdots,0,1)$，则可得$n-r$组非自由变量$x_1,x_{i_2},\cdots,x_{i_r}$的值，从而构成$n-r$组方程组
-    的解，设该$n-r$组解的解向量为$\boldsymbol{\alpha_1},\boldsymbol{\alpha_2},\cdots\boldsymbol{\alpha_{n-r}}$，则它们就是方程组的一个基础解系。
+    的解，设该$n-r$组解的解向量为$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\cdots\boldsymbol{\alpha}_{n-r}$，则它们就是方程组的一个基础解系。
     方程组的通解为：
-    $$k_1\boldsymbol{\alpha_1}+\cdots+k_{n-r}\boldsymbol{\alpha_{n-r}},\quad \mbox{其中}k_1,\cdots,k_{n-r}\in \mathbf{R}\mbox{为任意常数}$$
+    $$k_1\boldsymbol{\alpha}_1+\cdots+k_{n-r}\boldsymbol{\alpha}_{n-r},\quad \mbox{其中}k_1,\cdots,k_{n-r}\in \mathbf{R}\mbox{为任意常数}$$
 \end{theorem}
 \begin{remark}
     若系数矩阵简化后的行简化梯形矩阵为
@@ -138,7 +138,7 @@
         0 & 0 & \cdots & 0 & 0 & \cdots & 0 \\
     \end{array}\right)$$
     则
-    $$\boldsymbol{\alpha_1}=\left(\begin{array}{c}
+    $$\boldsymbol{\alpha}_1=\left(\begin{array}{c}
         -d_{1,r+1}\\
         \vdots\\
         -d_{r,r+1}\\
@@ -147,7 +147,7 @@
         \vdots\\
         0
     \end{array}\right),\quad
-    \boldsymbol{\alpha_2}=\left(\begin{array}{c}
+    \boldsymbol{\alpha}_2=\left(\begin{array}{c}
         -d_{1,r+2}\\
         \vdots\\
         -d_{r,r+2}\\
@@ -157,7 +157,7 @@
         0
     \end{array}\right),\quad
     \cdots,\quad
-    \boldsymbol{\alpha_{n-r}}=\left(\begin{array}{c}
+    \boldsymbol{\alpha}_{n-r}=\left(\begin{array}{c}
         -d_{1n}\\
         \vdots\\
         -d_{rn}\\
@@ -178,8 +178,8 @@
     若$\boldsymbol{A}\boldsymbol{\eta}=\boldsymbol{b}(\boldsymbol{b}\neq \boldsymbol{\theta})$，则$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$
     的通解可以表示为
     $$\boldsymbol{\eta}+\boldsymbol{\alpha}$$
-    其中$\boldsymbol{\alpha}$为$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{\theta}$的解。若$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{\theta}$的基础解系为$\boldsymbol{\alpha_1},\cdots,\boldsymbol{\alpha_r}$
+    其中$\boldsymbol{\alpha}$为$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{\theta}$的解。若$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{\theta}$的基础解系为$\boldsymbol{\alpha}_1,\cdots,\boldsymbol{\alpha}_r$
     ，则$\boldsymbol{A}\boldsymbol{x}=\boldsymbol{b}$的通解为：
-    $\boldsymbol{\eta}+k_1\boldsymbol{\alpha_1}+\cdots+k_r\boldsymbol{\alpha_r}$，
+    $\boldsymbol{\eta}+k_1\boldsymbol{\alpha}_1+\cdots+k_r\boldsymbol{\alpha}_r$，
     其中$k_1,\cdots,k_r\in \mathbf{R}$为任意实数。
 \end{theorem}
