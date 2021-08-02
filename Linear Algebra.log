@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  2 AUG 2021 16:47
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  2 AUG 2021 18:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -887,7 +887,16 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
 \big@size=\dimen339
-) (d:/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+) (d:/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (d:/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (d:/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 ) (d:/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2020/02/18 v3.8.2 xeCJK patch file for listings
@@ -986,9 +995,14 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 24.88pt on input line 20.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 20.
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 20.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+ (d:/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+ (d:/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 Package fontspec Warning: Font "LiSu" does not contain requested Script "CJK".
 
@@ -1132,7 +1146,11 @@ Overfull \hbox (20.63683pt too wide) in paragraph at lines 160--164
 
 [20]) [21] (./chapter5.tex [22
 
-] [23] [24] [25]) [26] (./chapter6.tex) [27
+] [23] [24] [25]) [26] (./chapter6.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 4.
+ (d:/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)) [27
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
@@ -1144,11 +1162,11 @@ Package rerunfilecheck Info: File `"Linear Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 31189 strings out of 479418
- 632065 string characters out of 5890305
+ 31724 strings out of 479418
+ 638940 string characters out of 5890305
  1167869 words of memory out of 5000000
- 48076 multiletter control sequences out of 15000+600000
- 576854 words of font info for 95 fonts, out of 8000000 for 9000
+ 48589 multiletter control sequences out of 15000+600000
+ 579205 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  68i,17n,126p,871b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
 
