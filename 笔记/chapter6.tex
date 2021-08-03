@@ -271,3 +271,73 @@
 
 
 \subsection{线性变换的特征值和特征向量}
+    \begin{definition}[线性变换的特征值与特征向量]
+        设$V$是数域$K$上线性空间，$T$是$V$上的一个线性变换，若对$K$中的一个数$\lambda$，存在$V$的一个非零向量
+        $\xi$，使得$$T\boldsymbol{\xi}=\lambda\boldsymbol{\xi}$$
+        则称$\lambda$是线性变换$T$的一个{\heiti 特征值}，$\boldsymbol{\xi}$是$T$的属于$\lambda$的{\heiti 特征向量}.
+    \end{definition}
+
+    \begin{theorem}
+        设$V$是数域$K$上线性空间，$T$是$V$上的一个线性变换，则$T$的属于特征值$\lambda$的
+        所有特征向量和零向量一起构成了$V$的一个子空间，该子空间记为
+        $$V_{\lambda}=\{\boldsymbol{\xi}\in V:T\boldsymbol{\xi}=\lambda\boldsymbol{\xi}\}$$
+    \end{theorem}
+
+    \begin{definition}[特征子空间]
+        称$V_\lambda$为线性变换$T$对应于特征值$\lambda$的{\heiti 特征子空间}．
+    \end{definition}
+
+    \begin{theorem}
+        计算线性变换$T$的特征值和特征向量的步骤：
+        \begin{enumerate}[(1)]
+            \item 给定$V$的一组基，求出$T$在这组基下的矩阵$A$；
+            \item 计算特征多项式$p(\lambda)=|\lambda\boldsymbol{E}-\boldsymbol{A}|$
+            \item 求$p(\lambda)=0$的含于$K$的根（$T$的特征值）$$\lambda_1,\lambda_2,\cdots,\lambda_n$$
+            \item 对每个$\lambda_i(i=1,2,\cdots,n)$，求齐次线性方程组$$(\lambda_i\boldsymbol{E}-\boldsymbol{A})\boldsymbol{x}=\boldsymbol{\theta}$$的一个基础解系；
+            \item 以求出的基础解系为坐标写出$V$的一个向量组，它就是$V_{\lambda_i}(i=1,2,\cdots,n)$的一组基.
+        \end{enumerate}
+
+        若计算$\boldsymbol{A}$的特征值和特征向量，只需直接进行第（2）、（3）、（4）步，且第（3）步须求出
+        $p(\lambda)=0$的全部复根（即$\boldsymbol{A}$的全部特征值）.
+    \end{theorem}
+
+    \begin{definition}
+        将线性变换$T$在任一组基下的矩阵的特征多项式称为$T$的{\heiti 特征多项式}，而将$T$在任一组基下的矩阵的特征矩阵称为$T$的{\heiti 特征矩阵}.
+    \end{definition}
+
+    \begin{theorem}
+        有限维线性空间上的线性变换的特征值和特征多项式与所选基底无关。
+    \end{theorem}
+
+    \begin{theorem}
+        设$\lambda_1,\lambda_2,\cdots,\lambda_s$是线性变换$T$（或矩阵$\boldsymbol{A}$）的$s$个互异的特征值，$\boldsymbol{\xi}_i$是
+        属于特征值$\lambda_i(i=1,2,\cdots,s)$的特征向量，则$\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_s$线性无关.
+    \end{theorem}
+
+    \begin{definition}
+        设$T$是$n$维线性空间$V$上的一个线性变换，若$T$在某组基$\boldsymbol{\varepsilon}_1,\boldsymbol{\varepsilon}_2,\cdots,\boldsymbol{\varepsilon}_n$
+        下的矩阵为对角矩阵，则称$T$有{\heiti 最简表示}.
+    \end{definition}
+
+    \begin{theorem}
+        $n$维线性空间$V$上的一个线性变换$T$有最简表示的充要条件是$T$有$n$个线性无关的特征向量.
+    \end{theorem}
+
+    \begin{theorem}
+        若线性变换$T$有$n$个互异的特征值，则$T$有最简表示.
+    \end{theorem}
+
+    \begin{theorem}
+        若$\lambda_1,\lambda_2$是线性变换$T$的两个不同的特征值，$\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_s$是$T$
+        的属于$\lambda_1$的线性无关的特征向量，$\boldsymbol{\nu}_1,\boldsymbol{\nu}_2,\cdots,\boldsymbol{\nu}_t$是$T$的属于$\lambda_2$的线性无关的特征向量，
+        则$\boldsymbol{\xi}_1,\boldsymbol{\xi}_2,\cdots,\boldsymbol{\xi}_s;\boldsymbol{\nu}_1,\boldsymbol{\nu}_2,\cdots,\boldsymbol{\nu}_t$线性无关．
+    \end{theorem}
+
+    \begin{theorem}
+        若$\lambda_0$是线性变换$T$的$s$重特征值，则$T$的属于$\lambda_0$的特征向量中，线性无关的最大组包含的向量的个数不超过$s$.
+    \end{theorem}
+
+    \begin{theorem}
+        $n$维线性空间上的线性变换$T$有最简表示$\Longleftrightarrow $$T$有$n$个特征值（包括重数），且对$T$的每个$s_i$重特征值$\lambda_i$，
+        其对应的特征矩阵$\lambda_i\boldsymbol{E}-\boldsymbol{A}$的秩为$n-s_i$. 
+    \end{theorem}

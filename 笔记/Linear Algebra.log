@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  3 AUG 2021 13:39
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.13)  3 AUG 2021 15:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/alant/Desktop/Linear Algebra/Linear Algebra"
-(c:/Users/alant/Desktop/Linear Algebra/Linear Algebra.tex
+**"c:/Users/alant/Desktop/Linear Algebra/笔记/Linear Algebra"
+(c:/Users/alant/Desktop/Linear Algebra/笔记/Linear Algebra.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (./elegantnote.cls
 Document Class: elegantnote 2020/04/12 ElegantNote v2.30 class
@@ -1152,7 +1152,12 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 5.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [27
 
-] [28] [29] [30]) [31]
+] [28] [29] [30] [31]
+Overfull \hbox (1.7171pt too wide) in paragraph at lines 331--334
+\TU/KaiTi(0)/m/n/10.95 的 特 征 向 量，| $[][]\OML/cmm/m/it/10.95 ; [][]; []  ; [][]$ \TU/KaiTi(0)/m/n/10.95 是 $\OML/cmm/m/it/10.95 T$ \TU/KaiTi(0)/m/n/10.95 的 属 于 $\OML/cmm/m/it/10.95 ^^U[]$ \TU/KaiTi(0)/m/n/10.95 的 线 性 无 关 的 特 征 向 量，|  则 $[][]\OML/cmm/m/it/10.95 ; [][]; []  ; [][]\OT1/cmr/m/n/10.95 ; [][]\OML/cmm/m/it/10.95 ; [][]; []  ; [][]$
+ []
+
+) [32]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (./Linear Algebra.aux)
@@ -1162,12 +1167,12 @@ Package rerunfilecheck Info: File `"Linear Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 31738 strings out of 479418
- 639680 string characters out of 5890305
+ 31756 strings out of 479418
+ 640851 string characters out of 5890305
  1167869 words of memory out of 5000000
- 48603 multiletter control sequences out of 15000+600000
+ 48621 multiletter control sequences out of 15000+600000
  579205 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 68i,17n,126p,871b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,17n,126p,874b,743s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Linear Algebra.pdf (33 pages).
+Output written on Linear Algebra.pdf (34 pages).
